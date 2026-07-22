@@ -98,47 +98,12 @@ export default function Hero() {
 
               {/* Illustration Avatar Frame */}
               <div className="relative rounded-lg overflow-hidden border-2 border-[var(--color-border)] bg-[var(--color-card-secondary)] mb-6 aspect-square flex items-center justify-center">
-                {/* SVG Visual Stylized Character Illustration */}
-                <svg
-                  viewBox="0 0 400 400"
+                {/* Profile Photo - Retro Poster Aesthetic */}
+                <img
+                  src="/profile.png"
+                  alt="Profile"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                >
-                  <defs>
-                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="var(--color-accent-salmon)" />
-                      <stop offset="100%" stopColor="var(--color-accent-crimson)" />
-                    </linearGradient>
-                    <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
-                      <stop offset="0%" stopColor="var(--color-accent-sage)" />
-                      <stop offset="100%" stopColor="var(--color-card)" />
-                    </linearGradient>
-                  </defs>
-
-                  {/* Backdrop art shapes */}
-                  <circle cx="200" cy="200" r="160" fill="url(#grad2)" opacity="0.6" />
-                  <path d="M 50 350 Q 200 120 350 350" fill="none" stroke="var(--color-border)" strokeWidth="6" />
-
-                  {/* Stylized Anime / Poster Character Silhouette */}
-                  <path
-                    d="M130 380 Q130 260 200 240 Q270 260 270 380 Z"
-                    fill="url(#grad1)"
-                  />
-                  {/* Head */}
-                  <circle cx="200" cy="180" r="55" fill="var(--color-card)" stroke="var(--color-border)" strokeWidth="5" />
-                  {/* Hair / Cap */}
-                  <path
-                    d="M145 175 C145 120 255 120 255 175 C240 140 160 140 145 175 Z"
-                    fill="var(--color-accent-crimson)"
-                  />
-                  {/* Glasses */}
-                  <rect x="165" y="170" width="30" height="20" rx="4" fill="none" stroke="var(--color-border)" strokeWidth="4" />
-                  <rect x="205" y="170" width="30" height="20" rx="4" fill="none" stroke="var(--color-border)" strokeWidth="4" />
-                  <line x1="195" y1="180" x2="205" y2="180" stroke="var(--color-border)" strokeWidth="4" />
-
-                  {/* Decorative Retro Sparkles */}
-                  <path d="M300 100 L308 120 L328 128 L308 136 L300 156 L292 136 L272 128 L292 120 Z" fill="var(--color-accent-yellow)" />
-                  <path d="M80 220 L84 232 L96 236 L84 240 L80 252 L76 240 L64 236 L76 232 Z" fill="var(--color-accent-salmon)" />
-                </svg>
+                />
 
                 {/* Corner Flourish Icons */}
                 <div className="absolute bottom-3 right-3 bg-[var(--color-card)] p-2 rounded border border-[var(--color-border)] shadow">

@@ -1,11 +1,11 @@
 export const personalInfo = {
-  name: "Angèle Snez",
+  name: "Naimul Hasan",
   title: "CREATIVE DIRECTOR & TECH INNOVATOR",
   subTitle: "Full-Stack Developer, Graphic Designer & Motion Artist",
   tagline: "Crafting digital experiences where retro art meets modern high-performance code.",
   location: "Paris / Remote Worldwide",
   status: "Available for New Projects & Freelance",
-  email: "angele.snez@portfolio.art",
+  email: "naimulhasandev@gmail.com",
   behance: "behance.net/angele-snez",
   linkedin: "linkedin.com/in/angele-snez",
   github: "github.com/angele-snez",
