@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Theme: Light Retro Poster (Image 1 inspired) */
+    --color-bg: #F4EFE6;
+    --color-card: #FAF6EE;
+    --color-card-secondary: #EBE4D5;
+    --color-border: #23201D;
+    --color-border-subtle: #D8D0C3;
+    --color-text-main: #23201D;
+    --color-text-muted: #5C564F;
+    --color-accent-crimson: #D9383A;
+    --color-accent-salmon: #E77F67;
+    --color-accent-sage: #4E7C63;
+    --color-accent-yellow: #E5AC3A;
+    --color-pill-bg: #EAE2D1;
+    --color-shadow: rgba(35, 32, 29, 0.12);
+  }
+
+  [data-theme="dark"] {
+    /* Theme: Mythic Dark Emerald & Crimson (Image 2 inspired) */
+    --color-bg: #071514;
+    --color-card: #0E2220;
+    --color-card-secondary: #16322F;
+    --color-border: #1F4540;
+    --color-border-subtle: #193834;
+    --color-text-main: #F0F6F5;
+    --color-text-muted: #95B5B0;
+    --color-accent-crimson: #E63946;
+    --color-accent-salmon: #FF6B6B;
+    --color-accent-sage: #2EC4B6;
+    --color-accent-yellow: #FFB703;
+    --color-pill-bg: #15332F;
+    --color-shadow: rgba(0, 0, 0, 0.4);
+  }
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  font-family: 'Outfit', sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
+}
+
+/* Typography styles */
+.font-display {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-tech {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-serif-mythic {
+  font-family: 'Cinzel', serif;
+}
+
+/* Poster Frame Border Styling */
+.retro-frame {
+  border: 2px solid var(--color-border);
+  position: relative;
+}
+
+.retro-frame-double {
+  border: 3px double var(--color-border);
+}
+
+.retro-card {
+  background-color: var(--color-card);
+  border: 2px solid var(--color-border);
+  box-shadow: 4px 4px 0px var(--color-border);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.retro-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 7px 7px 0px var(--color-border);
+}
+
+.retro-card-interactive {
+  background-color: var(--color-card);
+  border: 2px solid var(--color-border);
+  box-shadow: 3px 3px 0px var(--color-border);
+  transition: all 0.2s ease;
+}
+
+.retro-card-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 0px var(--color-accent-crimson);
+  border-color: var(--color-accent-crimson);
+}
+
+/* Badge pills */
+.badge-pill {
+  background-color: var(--color-pill-bg);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-crimson);
+}
+
+/* Star Flourish Keyframe */
+@keyframes starPulse {
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: scale(1.15) rotate(45deg);
+    opacity: 1;
+  }
+}
+
+.animate-star-pulse {
+  animation: starPulse 3.5s infinite ease-in-out;
+}
