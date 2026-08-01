@@ -33,7 +33,7 @@ export default function Hero() {
           {/* Top Vintage Metadata Bar */}
           <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b-2 border-[var(--color-border)] font-tech text-xs font-bold tracking-widest text-[var(--color-text-muted)] uppercase">
             <span>PORTFOLIO // {personalInfo.name}</span>
-            <span className="flex items-center gap-1.5 text-[var(--color-accent-crimson)]">
+            <span className="flex items-center gap-1.5 text-xl text-[var(--color-accent-crimson)]">
               <span className="inline-block w-2 h-2 rounded-full bg-[var(--color-accent-crimson)] animate-ping" />
               {personalInfo.status}
             </span>
@@ -47,11 +47,11 @@ export default function Hero() {
             <Sparkles className="absolute bottom-2 right-4 sm:right-12 w-8 h-8 text-[var(--color-accent-salmon)] animate-star-pulse" />
 
             <h2 className="font-tech text-xs sm:text-sm font-bold tracking-[0.3em] uppercase text-[var(--color-accent-sage)] mb-2">
-              ✦ ARTISTIC DIRECTION & INTERACTIVE CODE ✦
+              ✦ Full-Stack Web Developer ✦
             </h2>
 
-            <h1 className="font-display font-extrabold text-5xl sm:text-7xl lg:text-8xl uppercase tracking-tighter text-[var(--color-text-main)] leading-none drop-shadow-sm">
-              PORTFOLIO
+            <h1 className="font-display font-extrabold text-5xl sm:text-7xl lg:text-4xl uppercase tracking-tighter text-[var(--color-text-main)] leading-none drop-shadow-sm">
+              NAIMUL HASAN
             </h1>
 
             <p className="mt-4 max-w-2xl mx-auto font-tech text-sm sm:text-base text-[var(--color-text-muted)] font-medium">

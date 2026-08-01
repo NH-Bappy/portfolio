@@ -1,25 +1,57 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Github, Sparkles, CheckCircle2 } from 'lucide-react';
+import { X, ExternalLink, Github, CheckCircle2 } from 'lucide-react';
 
 export default function ProjectModal({ project, onClose }) {
+  useEffect(() => {
+    if (!project) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = 'unset';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [project, onClose]);
+
   if (!project) return null;
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/70 backdrop-blur-sm">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          transition={{ duration: 0.3 }}
-          className="relative w-full max-w-4xl retro-card bg-[var(--color-card)] overflow-hidden my-8"
+      <div
+        onClick={onClose}
+        className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/80 backdrop-blur-md cursor-pointer"
+      >
+        {/* Floating Fixed Close Button at Top-Right of Screen */}
+        <button
+          onClick={onClose}
+          className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50 px-4 py-2.5 rounded-full border-2 border-white bg-[var(--color-accent-crimson)] text-white shadow-2xl hover:bg-black hover:scale-105 transition-all cursor-pointer flex items-center gap-2 font-tech font-bold text-xs uppercase tracking-wider"
+          aria-label="Close modal"
         >
-          {/* Close button */}
+          <X className="w-5 h-5" />
+          <span>Close</span>
+        </button>
+
+        <motion.div
+          onClick={(e) => e.stopPropagation()}
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.95, y: 20 }}
+          transition={{ duration: 0.3 }}
+          className="relative w-full max-w-4xl retro-card bg-[var(--color-card)] overflow-hidden my-8 cursor-default"
+        >
+          {/* Inner Close Button inside Modal Header */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 z-20 p-2 rounded-full border-2 border-[var(--color-border)] bg-[var(--color-card)] text-[var(--color-text-main)] hover:bg-[var(--color-accent-crimson)] hover:text-white transition-colors cursor-pointer shadow-[2px_2px_0px_var(--color-border)]"
-            aria-label="Close modal"
+            className="absolute top-4 right-4 z-20 p-2.5 rounded-full border-2 border-[var(--color-border)] bg-[var(--color-card)] text-[var(--color-text-main)] hover:bg-[var(--color-accent-crimson)] hover:text-white transition-colors cursor-pointer shadow-[2px_2px_0px_var(--color-border)]"
+            aria-label="Close modal window"
           >
             <X className="w-5 h-5" />
           </button>
@@ -88,26 +120,36 @@ export default function ProjectModal({ project, onClose }) {
             )}
 
             {/* Actions */}
-            <div className="pt-6 border-t-2 border-[var(--color-border)] flex flex-wrap gap-4">
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-2.5 bg-[var(--color-accent-crimson)] text-white font-tech font-bold text-xs uppercase tracking-wider rounded border-2 border-[var(--color-border)] shadow-[3px_3px_0px_var(--color-border)] hover:translate-y-[-2px] hover:shadow-[5px_5px_0px_var(--color-border)] transition-all flex items-center gap-2"
-              >
-                <ExternalLink className="w-4 h-4" />
-                <span>Visit Live Demo</span>
-              </a>
+            <div className="pt-6 border-t-2 border-[var(--color-border)] flex flex-wrap items-center justify-between gap-4">
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-2.5 bg-[var(--color-accent-crimson)] text-white font-tech font-bold text-xs uppercase tracking-wider rounded border-2 border-[var(--color-border)] shadow-[3px_3px_0px_var(--color-border)] hover:translate-y-[-2px] hover:shadow-[5px_5px_0px_var(--color-border)] transition-all flex items-center gap-2"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  <span>Visit Live Demo</span>
+                </a>
 
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-2.5 bg-[var(--color-card-secondary)] text-[var(--color-text-main)] font-tech font-bold text-xs uppercase tracking-wider rounded border-2 border-[var(--color-border)] shadow-[3px_3px_0px_var(--color-border)] hover:translate-y-[-2px] hover:shadow-[5px_5px_0px_var(--color-border)] transition-all flex items-center gap-2"
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-2.5 bg-[var(--color-card-secondary)] text-[var(--color-text-main)] font-tech font-bold text-xs uppercase tracking-wider rounded border-2 border-[var(--color-border)] shadow-[3px_3px_0px_var(--color-border)] hover:translate-y-[-2px] hover:shadow-[5px_5px_0px_var(--color-border)] transition-all flex items-center gap-2"
+                >
+                  <Github className="w-4 h-4" />
+                  <span>View Source Code</span>
+                </a>
+              </div>
+
+              <button
+                onClick={onClose}
+                className="px-6 py-2.5 bg-[var(--color-pill-bg)] text-[var(--color-text-main)] font-tech font-bold text-xs uppercase tracking-wider rounded border-2 border-[var(--color-border)] hover:bg-[var(--color-accent-crimson)] hover:text-white transition-all cursor-pointer flex items-center gap-2"
               >
-                <Github className="w-4 h-4" />
-                <span>View Source Code</span>
-              </a>
+                <X className="w-4 h-4" />
+                <span>Close Window</span>
+              </button>
             </div>
 
           </div>
