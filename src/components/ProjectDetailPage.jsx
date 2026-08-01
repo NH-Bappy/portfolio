@@ -94,46 +94,44 @@ export default function ProjectDetailPage({ project, onBack, onSelectProject }) 
           <p className="font-tech text-sm sm:text-lg text-[var(--color-accent-sage)] font-semibold">
             {project.subtitle}
           </p>
-        </motion.div>
-
-        {/* 1. MEDIA SHOWCASE (Place for Video & Images) */}
+        </motion.div>        {/* 1. MEDIA SHOWCASE (Place for Video & Images) - Compact Size */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="retro-card p-6 sm:p-8 space-y-6"
+          className="retro-card p-5 sm:p-6 space-y-5 max-w-4xl mx-auto w-full"
         >
           {/* Media Header & Tab Switcher */}
-          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--color-border-subtle)] pb-4">
+          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[var(--color-border-subtle)] pb-3">
             <div className="flex items-center gap-2">
-              <Video className="w-5 h-5 text-[var(--color-accent-salmon)]" />
-              <h2 className="font-display font-bold text-xl uppercase tracking-tight text-[var(--color-text-main)]">
-                ✦ MEDIA SHOWCASE & DEMO
+              <Video className="w-4 h-4 text-[var(--color-accent-salmon)]" />
+              <h2 className="font-display font-bold text-lg sm:text-xl uppercase tracking-tight text-[var(--color-text-main)]">
+                ✦ MEDIA SHOWCASE &amp; DEMO
               </h2>
             </div>
 
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setMediaTab('video')}
-                className={`px-4 py-1.5 rounded-full border-2 border-[var(--color-border)] font-tech text-xs font-bold uppercase transition-all cursor-pointer flex items-center gap-1.5 ${
+                className={`px-3.5 py-1 rounded-full border-2 border-[var(--color-border)] font-tech text-xs font-bold uppercase transition-all cursor-pointer flex items-center gap-1.5 ${
                   mediaTab === 'video'
                     ? 'bg-[var(--color-accent-salmon)] text-white shadow-[2px_2px_0px_var(--color-border)]'
                     : 'bg-[var(--color-card-secondary)] text-[var(--color-text-main)] hover:bg-[var(--color-pill-bg)]'
                 }`}
               >
-                <Play className="w-3.5 h-3.5" />
+                <Play className="w-3 h-3" />
                 <span>Video Demo</span>
               </button>
               <button
                 onClick={() => setMediaTab('gallery')}
-                className={`px-4 py-1.5 rounded-full border-2 border-[var(--color-border)] font-tech text-xs font-bold uppercase transition-all cursor-pointer flex items-center gap-1.5 ${
+                className={`px-3.5 py-1 rounded-full border-2 border-[var(--color-border)] font-tech text-xs font-bold uppercase transition-all cursor-pointer flex items-center gap-1.5 ${
                   mediaTab === 'gallery'
                     ? 'bg-[var(--color-accent-salmon)] text-white shadow-[2px_2px_0px_var(--color-border)]'
                     : 'bg-[var(--color-card-secondary)] text-[var(--color-text-main)] hover:bg-[var(--color-pill-bg)]'
                 }`}
               >
-                <ImageIcon className="w-3.5 h-3.5" />
+                <ImageIcon className="w-3 h-3" />
                 <span>Screenshots Gallery ({project.galleryImages?.length || 1})</span>
               </button>
             </div>
@@ -141,8 +139,8 @@ export default function ProjectDetailPage({ project, onBack, onSelectProject }) 
 
           {/* Media Display Area */}
           {mediaTab === 'video' ? (
-            <div className="space-y-4">
-              <div className="relative aspect-video rounded-xl overflow-hidden border-2 border-[var(--color-border)] bg-black shadow-lg group">
+            <div className="space-y-3">
+              <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-[var(--color-border)] bg-black shadow-md max-w-3xl mx-auto">
                 {project.videoUrl ? (
                   <video
                     src={project.videoUrl}
@@ -163,14 +161,14 @@ export default function ProjectDetailPage({ project, onBack, onSelectProject }) 
                   />
                 )}
               </div>
-              <p className="font-tech text-xs text-[var(--color-text-muted)] text-center uppercase tracking-wider">
-                ✦ High-Definition Interactive Video Walkthrough & Motion Teaser
+              <p className="font-tech text-[11px] text-[var(--color-text-muted)] text-center uppercase tracking-wider">
+                ✦ High-Definition Interactive Video Walkthrough &amp; Motion Teaser
               </p>
             </div>
           ) : (
-            <div className="space-y-6">
+            <div className="space-y-4">
               {/* Main Active Image Display */}
-              <div className="relative aspect-video rounded-xl overflow-hidden border-2 border-[var(--color-border)] bg-slate-900 shadow-md">
+              <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-[var(--color-border)] bg-slate-900 shadow-md max-w-3xl mx-auto">
                 <img
                   src={selectedImage}
                   alt={project.title}
@@ -179,14 +177,14 @@ export default function ProjectDetailPage({ project, onBack, onSelectProject }) 
               </div>
 
               {/* Thumbnails Gallery Strip */}
-              <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 max-w-3xl mx-auto">
                 {project.galleryImages?.map((imgUrl, idx) => (
                   <button
                     key={idx}
                     onClick={() => setSelectedImage(imgUrl)}
-                    className={`relative aspect-video rounded-lg overflow-hidden border-2 transition-all cursor-pointer ${
+                    className={`relative aspect-video rounded-md overflow-hidden border-2 transition-all cursor-pointer ${
                       selectedImage === imgUrl
-                        ? 'border-[var(--color-accent-salmon)] scale-105 shadow-[3px_3px_0px_var(--color-border)]'
+                        ? 'border-[var(--color-accent-salmon)] scale-105 shadow-[2px_2px_0px_var(--color-border)]'
                         : 'border-[var(--color-border)] opacity-60 hover:opacity-100'
                     }`}
                   >
