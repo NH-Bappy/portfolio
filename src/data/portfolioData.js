@@ -61,24 +61,6 @@ export const education = [
   }
 ];
 
-export const aptitudes = [
-  "FIGMA & ADOBE XD",
-  "REACT & NEXT.JS",
-  "TAILWIND & CSS3",
-  "GSAP & CANVAS",
-  "FRAMER MOTION",
-  "PHOTOSHOP & AI",
-  "BLENDER 3D",
-  "AFTER EFFECTS",
-  "ZBRUSH & ASEPRITE"
-];
-
-export const hobbies = [
-  { name: "Graff & Pixel Art", icon: "Paintbrush" },
-  { name: "Fantasy & Game Dev", icon: "Gamepad2" },
-  { name: "Neo Anime & Comics", icon: "Sparkles" },
-  { name: "Synthwave Music", icon: "Music" }
-];
 
 export const skillCategories = [
   { id: "all", name: "All Sections" },
