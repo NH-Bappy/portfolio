@@ -47,14 +47,6 @@ export default function ProjectModal({ project, onClose }) {
           transition={{ duration: 0.3 }}
           className="relative w-full max-w-4xl retro-card bg-[var(--color-card)] overflow-hidden my-8 cursor-default"
         >
-          {/* Inner Close Button inside Modal Header */}
-          <button
-            onClick={onClose}
-            className="absolute top-4 right-4 z-20 p-2.5 rounded-full border-2 border-[var(--color-border)] bg-[var(--color-card)] text-[var(--color-text-main)] hover:bg-[var(--color-accent-crimson)] hover:text-white transition-colors cursor-pointer shadow-[2px_2px_0px_var(--color-border)]"
-            aria-label="Close modal window"
-          >
-            <X className="w-5 h-5" />
-          </button>
 
           {/* Modal Header Media Image */}
           <div className="relative h-64 sm:h-80 overflow-hidden border-b-2 border-[var(--color-border)] bg-gradient-to-r ${project.gradient}">
