@@ -101,32 +101,7 @@ export default function AboutExperience() {
                 </div>
               </div>
 
-              {/* Language Level Indicator */}
-              <div className="mt-8 pt-6 border-t border-[var(--color-border-subtle)]">
-                <h4 className="font-tech font-bold text-xs uppercase tracking-wider text-[var(--color-text-muted)] mb-3">
-                  LANGUAGES
-                </h4>
-                <div className="space-y-3">
-                  <div>
-                    <div className="flex justify-between text-xs font-tech font-bold mb-1">
-                      <span>FRENCH</span>
-                      <span className="text-[var(--color-accent-salmon)]">NATIVE</span>
-                    </div>
-                    <div className="h-2 rounded-full bg-[var(--color-pill-bg)] overflow-hidden border border-[var(--color-border)]">
-                      <div className="h-full bg-[var(--color-accent-salmon)] w-[100%]" />
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between text-xs font-tech font-bold mb-1">
-                      <span>ENGLISH</span>
-                      <span className="text-[var(--color-accent-sage)]">FLUENT (C1)</span>
-                    </div>
-                    <div className="h-2 rounded-full bg-[var(--color-pill-bg)] overflow-hidden border border-[var(--color-border)]">
-                      <div className="h-full bg-[var(--color-accent-sage)] w-[90%]" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+
 
             </div>
           </motion.div>
