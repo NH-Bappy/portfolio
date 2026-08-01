@@ -150,7 +150,7 @@ export default function Hero() {
                   </span>
                 </div>
                 <p className="font-body text-xs sm:text-sm text-[var(--color-text-main)] font-bold leading-relaxed">
-                  Aspiring Applied AI Engineer | Aiming to bridge full-stack engineering with intelligent AI systems and machine learning applications.
+                  {personalInfo.futureGoal}
                 </p>
               </div>
             </div>
