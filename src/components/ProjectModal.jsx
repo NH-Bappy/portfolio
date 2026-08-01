@@ -27,12 +27,12 @@ export default function ProjectModal({ project, onClose }) {
     <AnimatePresence>
       <div
         onClick={onClose}
-        className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/80 backdrop-blur-md cursor-pointer"
+        className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/80 backdrop-blur-md cursor-pointer"
       >
-        {/* Floating Fixed Close Button at Top-Right of Screen */}
+        {/* Floating Fixed Close Button below top navigation bar */}
         <button
           onClick={onClose}
-          className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50 px-4 py-2.5 rounded-full border-2 border-white bg-[var(--color-accent-crimson)] text-white shadow-2xl hover:bg-black hover:scale-105 transition-all cursor-pointer flex items-center gap-2 font-tech font-bold text-xs uppercase tracking-wider"
+          className="fixed top-16 right-4 sm:top-20 sm:right-8 z-[110] px-4 py-2.5 rounded-full border-2 border-white bg-[var(--color-accent-crimson)] text-white shadow-2xl hover:bg-black hover:scale-105 transition-all cursor-pointer flex items-center gap-2 font-tech font-bold text-xs uppercase tracking-wider"
           aria-label="Close modal"
         >
           <X className="w-5 h-5" />
