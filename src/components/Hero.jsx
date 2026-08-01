@@ -128,7 +128,7 @@ export default function Hero() {
               </div>
 
               {/* Bio Highlights */}
-              <div className="font-tech text-xs space-y-2 text-[var(--color-text-muted)] border-t border-[var(--color-border-subtle)] pt-4">
+              <div className="font-tech text-xs space-y-2 text-[var(--color-text-muted)] border-t border-[var(--color-border-subtle)] pt-4 mb-4">
                 <div className="flex justify-between">
                   <span className="font-bold uppercase">Based In:</span>
                   <span>Dhaka, Bangladesh</span>
@@ -137,10 +137,21 @@ export default function Hero() {
                   <span className="font-bold uppercase">Focus:</span>
                   <span>MERN &amp; PERN Stack</span>
                 </div>
-                <div className="flex justify-between text-[var(--color-accent-crimson)] font-bold pt-1 border-t border-[var(--color-border-subtle)]">
-                  <span className="uppercase">Future Goal:</span>
-                  <span>Applied AI Engineer</span>
+              </div>
+
+              {/* Prominent Future Goal Box on Left Side */}
+              <div className="p-4 rounded-xl border-2 border-[var(--color-border)] bg-[var(--color-card-secondary)] shadow-[3px_3px_0px_var(--color-border)] space-y-2 group hover:border-[var(--color-accent-salmon)] transition-all">
+                <div className="flex items-center gap-2">
+                  <div className="w-7 h-7 rounded bg-[var(--color-accent-crimson)] text-white flex items-center justify-center font-bold shadow-sm shrink-0">
+                    <Brain className="w-4 h-4 text-white animate-pulse" />
+                  </div>
+                  <span className="font-tech font-bold text-[10px] uppercase tracking-widest text-[var(--color-accent-salmon)]">
+                    ✦ FUTURE GOAL // APPLIED AI ENGINEER
+                  </span>
                 </div>
+                <p className="font-body text-xs text-[var(--color-text-main)] font-semibold leading-relaxed">
+                  Aspiring Applied AI Engineer | Aiming to bridge full-stack engineering with intelligent AI systems and machine learning applications.
+                </p>
               </div>
             </div>
           </motion.div>
@@ -176,24 +187,9 @@ export default function Hero() {
                 </p>
 
                 {personalInfo.bioLong2nd && (
-                  <p className="font-body text-sm sm:text-base leading-relaxed text-[var(--color-text-muted)] mb-6">
+                  <p className="font-body text-sm sm:text-base leading-relaxed text-[var(--color-text-muted)] mb-8">
                     {personalInfo.bioLong2nd}
                   </p>
-                )}
-
-                {/* Future Goal Banner */}
-                {personalInfo.futureGoal && (
-                  <div className="p-4 bg-[var(--color-card-secondary)] rounded-lg border-2 border-[var(--color-border)] mb-8 flex items-start gap-3 shadow-[3px_3px_0px_var(--color-border)]">
-                    <Brain className="w-6 h-6 text-[var(--color-accent-salmon)] shrink-0 mt-0.5" />
-                    <div>
-                      <span className="font-tech text-[10px] font-bold text-[var(--color-accent-salmon)] uppercase tracking-widest block mb-1">
-                        ✦ FUTURE GOAL // APPLIED AI ENGINEER
-                      </span>
-                      <p className="font-body text-xs sm:text-sm font-medium text-[var(--color-text-main)] leading-relaxed">
-                        {personalInfo.futureGoal}
-                      </p>
-                    </div>
-                  </div>
                 )}
               </div>
 
