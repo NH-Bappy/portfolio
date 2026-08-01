@@ -6,6 +6,7 @@ export const personalInfo = {
   location: "Dhaka / Remote Worldwide",
   status: "OPEN TO INTERNSHIP & JUNIOR ROLES",
   email: "naimulhasandev@gmail.com",
+  phone: "01715355149",
   behance: "behance.net/angele-snez",
   linkedin: "linkedin.com/in/angele-snez",
   github: "github.com/angele-snez",
@@ -17,13 +18,13 @@ export const personalInfo = {
 
 export const marqueeItems = [
   "✦ FULLSTACK DEVELOPMENT",
+  "✦ CLOUDINARY",
   "✦ UI/UX DESIGN",
-  "✦ MOTION GRAPHICS",
-  "✦ RETRO EDITORIAL ART",
   "✦ REACT & VITE",
   "✦ TAILWIND CSS",
   "✦ GSAP ANIMATIONS",
   "✦ FRAMER MOTION",
+  "✦ SSLCOMMAERZ IN integration",
 
 ];
 

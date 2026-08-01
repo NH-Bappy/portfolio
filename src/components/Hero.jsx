@@ -1,19 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Sparkles, Send, FileText, Compass, Download } from 'lucide-react';
+import { ArrowDown, Sparkles, Send, FileText, Compass, Download, Phone } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 import MarqueeTicker from './MarqueeTicker';
 
 export default function Hero() {
   const posterCategories = [
-    'UI/UX DESIGN',
-    'ILLUSTRATION',
-    'FRONTEND CODE',
-    'MOTION DESIGN',
-    '3D GRAPHICS',
-    'GAME DESIGN',
-    'BRANDING',
-    'INTERACTIVE WEB'
+    'node js',
+    'next js',
+    'typescript',
+    'postgresql',
+    'react',
+    'gsap',
+    'c++(DSA)',
+    'INTERACTIVE WEB',
+    'websockets'
   ];
 
   return (
@@ -32,7 +33,13 @@ export default function Hero() {
         >
           {/* Top Vintage Metadata Bar */}
           <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b-2 border-[var(--color-border)] font-tech text-xs font-bold tracking-widest text-[var(--color-text-muted)] uppercase">
-            <span>PORTFOLIO // {personalInfo.name}</span>
+            <a
+              href={`tel:${personalInfo.phone}`}
+              className="flex items-center gap-1.5 hover:text-[var(--color-accent-crimson)] transition-colors cursor-pointer text-decoration-none"
+            >
+              <Phone className="w-3.5 h-3.5 text-[var(--color-accent-salmon)]" />
+              <span>CONTACT: {personalInfo.phone}</span>
+            </a>
             <span className="flex items-center gap-1.5 text-xl text-[var(--color-accent-crimson)]">
               <span className="inline-block w-2 h-2 rounded-full bg-[var(--color-accent-crimson)] animate-ping" />
               {personalInfo.status}
