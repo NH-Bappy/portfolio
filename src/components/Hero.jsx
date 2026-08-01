@@ -140,16 +140,16 @@ export default function Hero() {
               </div>
 
               {/* Prominent Future Goal Box on Left Side */}
-              <div className="p-4 rounded-xl border-2 border-[var(--color-border)] bg-[var(--color-card-secondary)] shadow-[3px_3px_0px_var(--color-border)] space-y-2 group hover:border-[var(--color-accent-salmon)] transition-all">
+              <div className="p-4 rounded-xl border-2 border-[var(--color-accent-crimson)] bg-[var(--color-card-secondary)] shadow-[3px_3px_0px_var(--color-accent-crimson)] space-y-2 transition-all">
                 <div className="flex items-center gap-2">
                   <div className="w-7 h-7 rounded bg-[var(--color-accent-crimson)] text-white flex items-center justify-center font-bold shadow-sm shrink-0">
                     <Brain className="w-4 h-4 text-white animate-pulse" />
                   </div>
-                  <span className="font-tech font-bold text-[10px] uppercase tracking-widest text-[var(--color-accent-salmon)]">
+                  <span className="font-tech font-extrabold text-[11px] uppercase tracking-widest text-[var(--color-accent-crimson)]">
                     ✦ FUTURE GOAL // APPLIED AI ENGINEER
                   </span>
                 </div>
-                <p className="font-body text-xs text-[var(--color-text-main)] font-semibold leading-relaxed">
+                <p className="font-body text-xs sm:text-sm text-[var(--color-text-main)] font-bold leading-relaxed">
                   Aspiring Applied AI Engineer | Aiming to bridge full-stack engineering with intelligent AI systems and machine learning applications.
                 </p>
               </div>
