@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Sparkles, Send, FileText, Compass } from 'lucide-react';
+import { ArrowDown, Sparkles, Send, FileText, Compass, Download } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 import MarqueeTicker from './MarqueeTicker';
 
@@ -37,7 +37,16 @@ export default function Hero() {
               <span className="inline-block w-2 h-2 rounded-full bg-[var(--color-accent-crimson)] animate-ping" />
               {personalInfo.status}
             </span>
-            <span>PARIS &bull; 2026 EDITION</span>
+            <a
+              href={personalInfo.resumeUrl || '/resume.pdf'}
+              download="Naimul_Hasan_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-1.5 bg-[var(--color-accent-crimson)] text-white border-2 border-[var(--color-border)] rounded-full font-tech font-bold text-xs uppercase tracking-wider shadow-[2px_2px_0px_var(--color-border)] hover:bg-black hover:translate-y-[-1px] transition-all flex items-center gap-1.5 cursor-pointer text-decoration-none"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>Download Resume</span>
+            </a>
           </div>
 
           {/* Huge Poster Title */}

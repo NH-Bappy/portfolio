@@ -10,6 +10,7 @@ export const personalInfo = {
   linkedin: "linkedin.com/in/angele-snez",
   github: "github.com/angele-snez",
   twitter: "x.com/angele_artcode",
+  resumeUrl: "/resume.pdf",
   bioShort: "I am a 25-year-old creative developer & DA Junior with a deep passion for digital illustration, motion design, and cutting-edge web applications. I turn bold visual concepts into clean, interactive, lightning-fast code.",
   bioLong: "With a background in both fine art graphics and computer science, I blend retro editorial aesthetic with ultra-fluid modern web engineering. Whether building custom React web apps with GSAP & Framer Motion, designing brand visual identities, or constructing 3D/game motion elements, I craft solutions that captivate and perform."
 };
@@ -23,8 +24,7 @@ export const marqueeItems = [
   "✦ TAILWIND CSS",
   "✦ GSAP ANIMATIONS",
   "✦ FRAMER MOTION",
-  "✦ 3D & GAME ART",
-  "✦ BRANDING & ILLUSTRATION"
+
 ];
 
 export const experiences = [
