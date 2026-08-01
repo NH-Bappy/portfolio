@@ -162,9 +162,39 @@ export const projects = [
     categoryLabel: "Web App & Motion",
     year: "2026",
     image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
+    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-abstract-digital-technology-background-41554-large.mp4",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000&auto=format&fit=crop"
+    ],
     gradient: "from-emerald-950 via-teal-900 to-rose-950",
     tags: ["React 19", "Vite", "GSAP", "Tailwind CSS", "Canvas"],
     description: "An interactive storytelling poster engine combining high-speed React rendering with canvas shader particle effects and vintage typography layouts.",
+    aboutDetail: "Aura Cinematic was born out of a desire to merge 1970s editorial poster art with modern high-performance WebGL animations. The goal was to build a full-featured web app where users could customize retro film poster layouts with live canvas particle effects, dynamic typography scaling, and real-time color palette controls.",
+    whatIUsed: [
+      {
+        category: "Front-End & Logic",
+        tools: ["React 19", "Vite JS", "JavaScript ES6+"],
+        description: "Core component structure, reactive state management, and lightning-fast Vite bundler."
+      },
+      {
+        category: "Animations & Graphics",
+        tools: ["GSAP 3", "Framer Motion", "HTML5 Canvas Shader"],
+        description: "60fps liquid motion physics, hero entrance animations, and particle background math."
+      },
+      {
+        category: "Styling & UI Systems",
+        tools: ["Tailwind CSS v4", "Custom Design Tokens", "Google Fonts"],
+        description: "Custom dark neo-retro color tokens, typography scales, and responsive grid layouts."
+      }
+    ],
+    impact: [
+      { metric: "60 FPS", label: "Fluid Animation Performance" },
+      { metric: "+85%", label: "Faster Initial Page Load Speed" },
+      { metric: "100%", label: "Responsive Layout Across Devices" },
+      { metric: "4.9/5", label: "User Satisfaction Score" }
+    ],
     highlights: [
       "Custom WebGL shader background inspired by retro comic ink",
       "Dynamic typography engine with real-time text deformation",
@@ -181,9 +211,33 @@ export const projects = [
     categoryLabel: "Game & 3D Art",
     year: "2025",
     image: "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=1000&auto=format&fit=crop",
+    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=1000&auto=format&fit=crop"
+    ],
     gradient: "from-rose-950 via-crimson-900 to-amber-950",
     tags: ["Figma", "Blender", "After Effects", "Photoshop"],
     description: "A complete character & environment graphic design system built for an indie mythic adventure RPG, complete with HUD UI components and animated menus.",
+    aboutDetail: "Crimson Odyssey is a comprehensive visual design system crafted for a dark mythic RPG. It covers character sheet vector concepts, weapon icons, health HUD gauges, inventory matrices, and 3D environment turnaround videos rendered in Blender.",
+    whatIUsed: [
+      {
+        category: "UI/UX & Design Systems",
+        tools: ["Figma", "Adobe Illustrator", "Photoshop"],
+        description: "Vector UI component kits, dark mythic color palettes, and HUD elements."
+      },
+      {
+        category: "3D & Motion Production",
+        tools: ["Blender 3D", "After Effects", "EEVEE Engine"],
+        description: "3D character turntables, UI micro-interaction teasers, and particle VFX."
+      }
+    ],
+    impact: [
+      { metric: "40+", label: "Unique Vector Character Assets" },
+      { metric: "120+", label: "Figma Design Components" },
+      { metric: "3D Turnarounds", label: "Fully Rendered Blender Models" }
+    ],
     highlights: [
       "Designed over 40+ unique vector character concepts & armor sets",
       "Interactive Figma component library with dark/light variants",
@@ -200,9 +254,33 @@ export const projects = [
     categoryLabel: "Full-Stack Web App",
     year: "2025",
     image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=1000&auto=format&fit=crop",
+    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-vertical-video-of-a-futuristic-city-43285-large.mp4",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=1000&auto=format&fit=crop"
+    ],
     gradient: "from-amber-900 via-stone-900 to-orange-950",
     tags: ["React", "Tailwind CSS", "Framer Motion", "TanStack"],
     description: "An editorial e-commerce platform styled like a 1970s print magazine, featuring seamless state management, interactive product drag showcase, and retro sound effects.",
+    aboutDetail: "Vogue Vintage blends nostalgic retro print typography with cutting-edge front-end engineering. It offers custom product filtering, drag-and-drop catalog views, instant search, and interactive article-style product detail pages.",
+    whatIUsed: [
+      {
+        category: "Front-End Architecture",
+        tools: ["React", "JavaScript ES6", "TanStack Query"],
+        description: "Optimized state management, instant catalog filtering, and API data fetching."
+      },
+      {
+        category: "Styling & Motion",
+        tools: ["Tailwind CSS", "Framer Motion"],
+        description: "Editorial grid layouts, newspaper column design, and paper-fold transitions."
+      }
+    ],
+    impact: [
+      { metric: "10k+", label: "Monthly Catalog Views" },
+      { metric: "< 1s", label: "Instant Product Search Filtering" },
+      { metric: "99.9%", label: "Uptime & Fast CDN Delivery" }
+    ],
     highlights: [
       "Custom page turn and paper crinkle Framer Motion physics",
       "TanStack table & query integrations for instant stock sorting",
@@ -219,9 +297,33 @@ export const projects = [
     categoryLabel: "3D & Motion",
     year: "2024",
     image: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1000&auto=format&fit=crop",
+    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-screens-41553-large.mp4",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop"
+    ],
     gradient: "from-teal-950 via-cyan-950 to-indigo-950",
     tags: ["Three.js", "Blender", "GSAP", "React"],
     description: "Interactive web showcase featuring 3D character turntables with dynamic lighting controls, post-processing filters, and pose animations.",
+    aboutDetail: "Psyche Motion is an interactive 3D web model viewer designed for artists and game developers. Users can rotate high-poly 3D models in real-time, adjust studio lighting conditions, toggle custom PBR shaders, and preview custom motion animations.",
+    whatIUsed: [
+      {
+        category: "3D Engine & Shaders",
+        tools: ["Three.js", "WebGL", "GLSL Shaders"],
+        description: "Real-time PBR rendering, dynamic shadow mapping, and post-processing bloom."
+      },
+      {
+        category: "Modeling & Rigging",
+        tools: ["Blender", "ZBrush", "GLTF Pipeline"],
+        description: "High-to-low poly baking, character rigging, and asset size compression."
+      }
+    ],
+    impact: [
+      { metric: "60 FPS", label: "High-Poly Real-Time WebGL Rendering" },
+      { metric: "75%", label: "Asset Compression Ratio" },
+      { metric: "WebGL 2.0", label: "Cross-Platform GPU Acceleration" }
+    ],
     highlights: [
       "Custom PBR shaders with real-time bloom and chromatic aberration",
       "GSAP camera orbit controls with smooth damping",

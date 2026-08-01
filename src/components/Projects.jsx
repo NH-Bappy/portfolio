@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Eye, ArrowUpRight, Sparkles, FolderGit2 } from 'lucide-react';
+import { ExternalLink, Eye, ArrowUpRight } from 'lucide-react';
 import { projects } from '../data/portfolioData';
 import ProjectModal from './ProjectModal';
 
-export default function Projects() {
+export default function Projects({ onSelectProject }) {
   const [filter, setFilter] = useState('all');
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [modalProject, setModalProject] = useState(null);
 
   const categories = [
     { id: 'all', name: 'All Works' },
@@ -18,6 +18,14 @@ export default function Projects() {
   const filteredProjects = filter === 'all'
     ? projects
     : projects.filter(p => p.category === filter);
+
+  const handleOpenProject = (project) => {
+    if (onSelectProject) {
+      onSelectProject(project);
+    } else {
+      setModalProject(project);
+    }
+  };
 
   return (
     <section id="projects" className="py-16 sm:py-24 relative">
@@ -55,7 +63,7 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Projects Grid (Inspired by Image 1 bottom showcase) */}
+        {/* Projects Grid */}
         <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, idx) => (
@@ -88,11 +96,11 @@ export default function Projects() {
                     {/* Hover Overlay Button */}
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
                       <button
-                        onClick={() => setSelectedProject(project)}
-                        className="px-4 py-2 bg-[var(--color-accent-crimson)] text-white border-2 border-white rounded-full font-tech font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300 cursor-pointer"
+                        onClick={() => handleOpenProject(project)}
+                        className="px-5 py-2.5 bg-[var(--color-accent-crimson)] text-white border-2 border-white rounded-full font-tech font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300 cursor-pointer hover:scale-105"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View Details</span>
+                        <span>View Project Page</span>
                       </button>
                     </div>
                   </div>
@@ -126,10 +134,10 @@ export default function Projects() {
                 {/* Footer Action */}
                 <div className="px-6 py-4 border-t-2 border-[var(--color-border)] bg-[var(--color-card-secondary)] flex items-center justify-between">
                   <button
-                    onClick={() => setSelectedProject(project)}
+                    onClick={() => handleOpenProject(project)}
                     className="font-tech text-xs font-bold uppercase tracking-wider text-[var(--color-text-main)] hover:text-[var(--color-accent-crimson)] flex items-center gap-1 transition-colors cursor-pointer"
                   >
-                    <span>Inspect Case Study</span>
+                    <span>Inspect Full Case Study</span>
                     <ArrowUpRight className="w-4 h-4" />
                   </button>
 
@@ -151,10 +159,10 @@ export default function Projects() {
 
       </div>
 
-      {/* Project Detail Modal */}
+      {/* Fallback Modal */}
       <ProjectModal
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
+        project={modalProject}
+        onClose={() => setModalProject(null)}
       />
     </section>
   );
