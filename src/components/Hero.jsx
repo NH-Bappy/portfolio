@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Sparkles, Send, FileText, Compass, Download, Phone } from 'lucide-react';
+import { ArrowDown, Sparkles, Send, FileText, Compass, Download, Phone, Brain } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 import MarqueeTicker from './MarqueeTicker';
 
@@ -131,15 +131,15 @@ export default function Hero() {
               <div className="font-tech text-xs space-y-2 text-[var(--color-text-muted)] border-t border-[var(--color-border-subtle)] pt-4">
                 <div className="flex justify-between">
                   <span className="font-bold uppercase">Based In:</span>
-                  <span>Paris, France</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="font-bold uppercase">Experience:</span>
-                  <span>4+ Years Creative Dev</span>
+                  <span>Dhaka, Bangladesh</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="font-bold uppercase">Focus:</span>
-                  <span>React, GSAP, Motion</span>
+                  <span>MERN &amp; PERN Stack</span>
+                </div>
+                <div className="flex justify-between text-[var(--color-accent-crimson)] font-bold pt-1 border-t border-[var(--color-border-subtle)]">
+                  <span className="uppercase">Future Goal:</span>
+                  <span>Applied AI Engineer</span>
                 </div>
               </div>
             </div>
@@ -176,9 +176,24 @@ export default function Hero() {
                 </p>
 
                 {personalInfo.bioLong2nd && (
-                  <p className="font-body text-sm sm:text-base leading-relaxed text-[var(--color-text-muted)] mb-8">
+                  <p className="font-body text-sm sm:text-base leading-relaxed text-[var(--color-text-muted)] mb-6">
                     {personalInfo.bioLong2nd}
                   </p>
+                )}
+
+                {/* Future Goal Banner */}
+                {personalInfo.futureGoal && (
+                  <div className="p-4 bg-[var(--color-card-secondary)] rounded-lg border-2 border-[var(--color-border)] mb-8 flex items-start gap-3 shadow-[3px_3px_0px_var(--color-border)]">
+                    <Brain className="w-6 h-6 text-[var(--color-accent-salmon)] shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-tech text-[10px] font-bold text-[var(--color-accent-salmon)] uppercase tracking-widest block mb-1">
+                        ✦ FUTURE GOAL // APPLIED AI ENGINEER
+                      </span>
+                      <p className="font-body text-xs sm:text-sm font-medium text-[var(--color-text-main)] leading-relaxed">
+                        {personalInfo.futureGoal}
+                      </p>
+                    </div>
+                  </div>
                 )}
               </div>
 

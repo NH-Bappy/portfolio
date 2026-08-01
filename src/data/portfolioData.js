@@ -12,6 +12,7 @@ export const personalInfo = {
   github: "github.com/angele-snez",
   twitter: "x.com/angele_artcode",
   resumeUrl: "/resume.pdf",
+  futureGoal: "Aspiring Applied AI Engineer | Aiming to bridge full-stack engineering with intelligent AI systems and machine learning applications.",
   bioShort: "I am a 24-year-old creative Full-Stack Developer currently pursuing a 4-year Diploma in Computer Science and Technology. Alongside my academic journey, I have completed a 2-year professional course in full-stack development and continuously strengthen my skills through self-learning and hands-on projects.",
 
   bioLong: "I specialize in building modern, scalable, and high-performance web applications using technologies like MERN and PERN stacks. My work often combines creativity with technical precision—transforming bold visual ideas into clean, interactive, and lightning-fast user experiences.",
