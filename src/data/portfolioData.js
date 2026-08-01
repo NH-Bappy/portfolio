@@ -1,5 +1,6 @@
 export const personalInfo = {
-  name: "Naimul Hasan",
+  name: "NH-Bappy",
+  fullName: "Naimul Hasan",
   title: "CREATIVE DIRECTOR & TECH INNOVATOR",
   subTitle: "Full-Stack Developer, Graphic Designer & Motion Artist",
   tagline: "Full-Stack Developer specializing in MERN & PERN Stack  Building scalable web applications with real-world impact",
