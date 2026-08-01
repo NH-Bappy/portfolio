@@ -164,16 +164,22 @@ export default function Hero() {
                 </div>
 
                 <h4 className="font-tech font-bold text-lg sm:text-xl text-[var(--color-accent-crimson)] mb-6">
-                  Je m'appelle {personalInfo.name} &amp; je suis DA Junior &amp; Creative Developer.
+                  I'm {personalInfo.name} &amp; I'm a Full-Stack Web Developer.
                 </h4>
 
                 <p className="font-body text-sm sm:text-base leading-relaxed text-[var(--color-text-main)] mb-6">
                   {personalInfo.bioShort}
                 </p>
 
-                <p className="font-body text-sm sm:text-base leading-relaxed text-[var(--color-text-muted)] mb-8">
+                <p className="font-body text-sm sm:text-base leading-relaxed text-[var(--color-text-muted)] mb-6">
                   {personalInfo.bioLong}
                 </p>
+
+                {personalInfo.bioLong2nd && (
+                  <p className="font-body text-sm sm:text-base leading-relaxed text-[var(--color-text-muted)] mb-8">
+                    {personalInfo.bioLong2nd}
+                  </p>
+                )}
               </div>
 
               {/* CTA Action Buttons */}

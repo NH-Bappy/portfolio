@@ -12,8 +12,11 @@ export const personalInfo = {
   github: "github.com/angele-snez",
   twitter: "x.com/angele_artcode",
   resumeUrl: "/resume.pdf",
-  bioShort: "I am a 25-year-old creative developer & DA Junior with a deep passion for digital illustration, motion design, and cutting-edge web applications. I turn bold visual concepts into clean, interactive, lightning-fast code.",
-  bioLong: "With a background in both fine art graphics and computer science, I blend retro editorial aesthetic with ultra-fluid modern web engineering. Whether building custom React web apps with GSAP & Framer Motion, designing brand visual identities, or constructing 3D/game motion elements, I craft solutions that captivate and perform."
+  bioShort: "I am a 24-year-old creative Full-Stack Developer currently pursuing a 4-year Diploma in Computer Science and Technology. Alongside my academic journey, I have completed a 2-year professional course in full-stack development and continuously strengthen my skills through self-learning and hands-on projects.",
+
+  bioLong: "I specialize in building modern, scalable, and high-performance web applications using technologies like MERN and PERN stacks. My work often combines creativity with technical precision—transforming bold visual ideas into clean, interactive, and lightning-fast user experiences.",
+
+  bioLong2nd: "With experience ranging from backend systems and databases to real-time dashboards and IoT-integrated solutions, I enjoy developing complete end-to-end systems that solve real-world problems. I am passionate about learning cutting-edge technologies and aim to grow into an innovative developer who bridges design, performance, and functionality."
 };
 
 export const marqueeItems = [
