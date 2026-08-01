@@ -97,7 +97,7 @@ export default function Hero() {
               </div>
 
               {/* Illustration Avatar Frame */}
-              <div className="relative rounded-lg overflow-hidden border-2 border-[var(--color-border)] bg-[var(--color-card-secondary)] mb-6 aspect-square flex items-center justify-center">
+              <div className="relative rounded-full overflow-hidden border-4 border-[var(--color-border)] bg-[var(--color-card-secondary)] mb-6 aspect-square flex items-center justify-center shadow-[4px_4px_0px_var(--color-border)]">
                 {/* Profile Photo - Retro Poster Aesthetic */}
                 <img
                   src="/profile.png"
@@ -106,7 +106,7 @@ export default function Hero() {
                 />
 
                 {/* Corner Flourish Icons */}
-                <div className="absolute bottom-3 right-3 bg-[var(--color-card)] p-2 rounded border border-[var(--color-border)] shadow">
+                <div className="absolute bottom-3 right-3 bg-[var(--color-card)] p-2 rounded-full border-2 border-[var(--color-border)] shadow">
                   <Compass className="w-5 h-5 text-[var(--color-accent-crimson)] animate-spin-slow" />
                 </div>
               </div>

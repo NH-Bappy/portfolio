@@ -37,9 +37,11 @@ export default function Navbar() {
           href="#hero"
           className="flex items-center gap-2 group cursor-pointer text-decoration-none"
         >
-          <div className="w-8 h-8 rounded-md border-2 border-[var(--color-border)] bg-[var(--color-accent-crimson)] text-white flex items-center justify-center font-display font-bold text-sm shadow-[2px_2px_0px_var(--color-border)] group-hover:rotate-6 transition-transform">
-            ✦
-          </div>
+          <img
+            src="/profile.png"
+            alt={personalInfo.name}
+            className="w-9 h-9 rounded-full border-2 border-[var(--color-border)] object-cover shadow-[2px_2px_0px_var(--color-border)] group-hover:scale-105 transition-transform"
+          />
           <div className="flex flex-col">
             <span className="font-display font-bold text-base tracking-wider uppercase leading-none text-[var(--color-text-main)]">
               {personalInfo.name}
