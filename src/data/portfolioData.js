@@ -58,16 +58,74 @@ export const experiences = [
 
 export const education = [
   {
-    period: "2021 - 2023",
-    degree: "GOBELINS Paris (FINER)",
-    detail: "Mastery in Digital Creation, Interactive Web Engineering, Motion & Graphic Design."
+    period: "Jan 2023 – Dec 2026",
+    degree: "Diploma in Engineering, Computer Science",
+    institution: "Graphic Arts Institute",
+    logo: "/gai-logo.png",
+    grade: "3.5/4",
+    activities: [
+      "Hackathons and Programming Competitions",
+      "Group Project Development",
+      "Collaborative Coding and Problem Solving"
+    ],
+    detail: "Participated in multiple hackathons and programming competitions, building collaborative group software applications including a faculty-praised Final Year Project (FYP). Strengthened core competencies in full-stack development, algorithms, and real-world system architecture.",
+    type: "Education",
+    badge: "Academic Diploma",
+    icon: "GraduationCap"
   },
   {
-    period: "2018 - 2021",
-    degree: "SDAM Balbiere (Titre VII)",
-    detail: "Digital Graphic Designer specialized in interactive web, 3D modeling, & animation."
+    period: "May 2024 – Jun 2026",
+    degree: "Diploma, Full-Stack Web Developer",
+    institution: "Creative IT Institute",
+    logo: "/creative-it-logo.png",
+    activities: [
+      "Participated in hands-on lab sessions, real-world projects, & collaborative tasks",
+      "Engaged in problem-solving exercises, coding practice, & full-stack teamwork",
+      "Contributed to project-based learning and practical implementation of modern web tech"
+    ],
+    detail: "Completed a 12-month Full-Stack Web Development Diploma mastering React.js, Node.js, Express, PHP, and MongoDB. Built over 50+ practical projects and lab applications with focus on RESTful APIs, responsive UI layouts, and production deployment.",
+    type: "Certification",
+    badge: "Professional Diploma",
+    icon: "Award"
+  },
+  {
+    period: "Issued Nov 2025 · Expires Nov 2030",
+    degree: "National Skills Certificate in Web Design and Development for Freelancing (Level 3)",
+    institution: "National Skills Development Authority, NSDA",
+    logo: "/nsda-logo.jpg",
+    credentialId: "NSC-ICT-WDDF-L3-001990",
+    detail: "Government-accredited Level 3 National Skills Certification in Web Design and Development for Freelancing issued by the National Skills Development Authority (NSDA), Bangladesh. Demonstrates professional competency in modern web standards, responsive UI development, user experience optimization, and industry-standard freelancing workflows.",
+    type: "Certification",
+    badge: "Govt. Level 3 Cert",
+    icon: "Award"
+  },
+  {
+    period: "3 Days · 8 Hours Masterclass",
+    degree: "Generative AI Mastermind",
+    institution: "Outskill",
+    logo: "/outskill-logo.png",
+    detail: "Completed an intensive 3-day (8-hour) Masterclass in Generative AI hosted by Outskill. Mastered hands-on prompt engineering, AI workflow automation, LLM integrations, AI image & asset generation, and leveraging generative models to accelerate software engineering productivity.",
+    type: "Certification",
+    badge: "AI Masterclass",
+    icon: "Award"
+  },
+  {
+    period: "8 Months Course · Currently Learning",
+    degree: "Sigma 1.0 - Data Structures & Algorithms (DSA)",
+    institution: "Apna College",
+    logo: "/apna-college-logo.png",
+    activities: [
+      "Problem Solving, Recursion, Backtracking & Bit Manipulation",
+      "Linear & Advanced DS (LinkedLists, Stacks, Queues, Heaps, Hashmaps)",
+      "Dynamic Programming (Memoization, Tabulation, Knapsack, LCS)"
+    ],
+    detail: "Enrolled in the 8-month intensive Sigma 1.0 course by Apna College focusing on Data Structures & Algorithms (DSA), complexity analysis, OOP principles, greedy strategies, and dynamic programming.",
+    type: "Certification",
+    badge: "In Progress · DSA",
+    icon: "Award"
   }
 ];
+
 
 
 export const skillCategories = [

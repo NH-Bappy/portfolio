@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutExperience from './components/AboutExperience';
 import Skills from './components/Skills';
+import EducationCertification from './components/EducationCertification';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -19,7 +20,7 @@ export default function App() {
         const projId = hash.replace('#project-', '');
         const found = projects.find((p) => p.id === projId);
         if (found) setSelectedProject(found);
-      } else if (hash === '' || hash === '#hero' || hash === '#projects' || hash === '#about' || hash === '#skills' || hash === '#contact') {
+      } else if (hash === '' || hash === '#hero' || hash === '#projects' || hash === '#about' || hash === '#skills' || hash === '#education' || hash === '#contact') {
         setSelectedProject(null);
       }
     };
@@ -63,6 +64,7 @@ export default function App() {
         <Projects onSelectProject={(proj) => handleSelectProject(proj)} />
         <AboutExperience />
         <Skills />
+        <EducationCertification />
         <Contact />
       </main>
       <Footer />
