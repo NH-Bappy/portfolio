@@ -151,8 +151,7 @@ export const skillSections = [
       { name: "Tailwind CSS & SCSS", tag: "Styling & UI" },
       { name: "GSAP & Framer Motion", tag: "Animation" },
       { name: "HTML5 & Modern CSS3", tag: "Web Standards" },
-      { name: "Redux Toolkit & Zustand", tag: "State Management" },
-      { name: "Vue.js", tag: "UI Framework" }
+      { name: "Redux Toolkit & Zustand", tag: "State Management" }
     ]
   },
   {
@@ -164,7 +163,6 @@ export const skillSections = [
     badgeColor: "bg-[var(--color-accent-salmon)] text-white",
     skills: [
       { name: "Node.js & Express", tag: "Runtime & Framework" },
-      { name: "Python & FastAPI / Django", tag: "API Engine" },
       { name: "RESTful APIs & GraphQL", tag: "API Architecture" },
       { name: "NestJS & Microservices", tag: "Framework" },
       { name: "JWT & OAuth 2.0", tag: "Auth & Security" },
@@ -194,11 +192,7 @@ export const skillSections = [
     icon: "Cloud",
     badgeColor: "bg-[var(--color-accent-sage)] text-white",
     skills: [
-      { name: "AWS (S3, EC2, Lambda)", tag: "Cloud Infrastructure" },
-      { name: "Docker & Containers", tag: "Containerization" },
-      { name: "Vercel & Netlify", tag: "Edge Deployment" },
-      { name: "GitHub Actions", tag: "CI/CD Automation" },
-      { name: "Nginx & Cloudflare", tag: "Web Server & CDN" }
+      { name: "Vercel & Netlify", tag: "Edge Deployment" }
     ]
   },
   {
@@ -210,11 +204,9 @@ export const skillSections = [
     badgeColor: "bg-[var(--color-accent-crimson)] text-white",
     skills: [
       { name: "Git & GitHub", tag: "Version Control" },
-      { name: "Figma & UI/UX Design", tag: "Design Tool" },
       { name: "Postman & Swagger", tag: "API Testing" },
       { name: "Vite & Turbopack", tag: "Build Tools" },
-      { name: "Linux & Bash Shell", tag: "CLI & Environment" },
-      { name: "Photoshop & Illustrator", tag: "Graphic Art" }
+      { name: "Linux & Bash Shell", tag: "CLI & Environment" }
     ]
   }
 ];
