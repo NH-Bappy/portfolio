@@ -192,7 +192,8 @@ export const skillSections = [
     icon: "Cloud",
     badgeColor: "bg-[var(--color-accent-sage)] text-white",
     skills: [
-      { name: "Vercel & Netlify", tag: "Edge Deployment" }
+      { name: "Vercel & Netlify", tag: "Edge Deployment" },
+      { name: "Render", tag: "Cloud Hosting" }
     ]
   },
   {
