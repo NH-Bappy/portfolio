@@ -34,7 +34,7 @@ export default function AboutExperience() {
               </h3>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-10">
               {experiences.map((exp, idx) => (
                 <div
                   key={idx}
@@ -44,7 +44,7 @@ export default function AboutExperience() {
                   <div className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-[var(--color-accent-crimson)] border border-[var(--color-card)] group-hover:scale-125 transition-transform" />
                   
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-1">
-                    <h4 className="font-display font-extrabold text-lg sm:text-xl text-[var(--color-text-main)]">
+                    <h4 className="font-display font-extrabold text-lg sm:text-2xl text-[var(--color-text-main)]">
                       {exp.role}
                     </h4>
                     <span className="font-tech text-xs font-bold text-[var(--color-accent-salmon)] uppercase tracking-wider bg-[var(--color-card-secondary)] px-3 py-1 rounded border border-[var(--color-border-subtle)] w-fit">
@@ -56,9 +56,32 @@ export default function AboutExperience() {
                     {exp.company}
                   </span>
                   
-                  <p className="font-body text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed max-w-4xl">
-                    {exp.description}
-                  </p>
+                  {exp.description && (
+                    <p className="font-body text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed max-w-4xl mb-4">
+                      {exp.description}
+                    </p>
+                  )}
+
+                  {exp.points && exp.points.length > 0 && (
+                    <ul className="space-y-2.5 mb-5 max-w-4xl">
+                      {exp.points.map((pt, pIdx) => (
+                        <li key={pIdx} className="flex items-start gap-2.5 font-body text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed">
+                          <span className="text-[var(--color-accent-crimson)] font-bold text-sm shrink-0 mt-0.5">✦</span>
+                          <span>{pt}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {exp.techStack && exp.techStack.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {exp.techStack.map((tech, tIdx) => (
+                        <span key={tIdx} className="font-tech text-[11px] font-semibold px-2.5 py-1 rounded bg-[var(--color-card-secondary)] text-[var(--color-accent-salmon)] border border-[var(--color-border-subtle)]">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
