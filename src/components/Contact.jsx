@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
-import { Mail, Linkedin, Github, Twitter, Copy, Check, Send, Sparkles, MessageSquare, MapPin } from 'lucide-react';
+import { Mail, Linkedin, Github, Twitter, Facebook, Phone, Copy, Check, Send, Sparkles, MessageSquare, MapPin } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+
+  const formatUrl = (url) => {
+    if (!url) return '#';
+    if (url.startsWith('http://') || url.startsWith('https://')) return url;
+    return `https://${url}`;
+  };
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(personalInfo.email);
     setCopied(true);
 
-    // Fire decorative confetti burst
     confetti({
       particleCount: 50,
       spread: 60,
@@ -21,6 +27,19 @@ export default function Contact() {
     });
 
     setTimeout(() => setCopied(false), 3000);
+  };
+
+  const handleCopyPhone = (num) => {
+    navigator.clipboard.writeText(num);
+    setCopiedPhone(num);
+
+    confetti({
+      particleCount: 40,
+      spread: 50,
+      origin: { y: 0.8 }
+    });
+
+    setTimeout(() => setCopiedPhone(''), 3000);
   };
 
   const handleSubmit = (e) => {
@@ -57,7 +76,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
-          {/* Left Column: Direct Links & Contact Pills (Inspired by Image 1 & 2 contact cards) */}
+          {/* Left Column: Direct Links & Contact Pills */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -65,7 +84,7 @@ export default function Contact() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-5 flex flex-col justify-between"
           >
-            <div className="retro-card p-6 sm:p-8 flex-1 space-y-8">
+            <div className="retro-card p-6 sm:p-8 flex-1 space-y-6">
               
               <div>
                 <div className="flex items-center gap-2 mb-3">
@@ -75,7 +94,7 @@ export default function Contact() {
                   </h3>
                 </div>
                 <p className="font-body text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed">
-                  Have a creative project, motion design mandate, or full-stack web application in mind? Reach out directly via email or social networks below.
+                  Have a creative project, motion design mandate, or full-stack web application in mind? Reach out directly via email, phone, or social channels below.
                 </p>
               </div>
 
@@ -89,9 +108,12 @@ export default function Contact() {
                     <span className="font-tech text-[10px] uppercase font-bold text-[var(--color-text-muted)] block">
                       EMAIL ADDRESS
                     </span>
-                    <span className="font-tech text-xs sm:text-sm font-bold text-[var(--color-text-main)] truncate block">
+                    <a
+                      href={`mailto:${personalInfo.email}`}
+                      className="font-tech text-xs sm:text-sm font-bold text-[var(--color-text-main)] truncate block hover:text-[var(--color-accent-crimson)] transition-colors"
+                    >
                       {personalInfo.email}
-                    </span>
+                    </a>
                   </div>
                 </div>
 
@@ -113,7 +135,69 @@ export default function Contact() {
                 </button>
               </div>
 
-              {/* Social Channels List (Image 1 & 2 inspired) */}
+              {/* Phone Numbers Section */}
+              <div className="space-y-3">
+                <h4 className="font-tech text-xs font-bold text-[var(--color-text-muted)] uppercase tracking-wider flex items-center gap-1.5">
+                  <Phone className="w-3.5 h-3.5 text-[var(--color-accent-salmon)]" />
+                  <span>DIRECT PHONE NUMBERS</span>
+                </h4>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {/* Phone Primary */}
+                  <div className="bg-[var(--color-card-secondary)] p-3 rounded border border-[var(--color-border)] flex items-center justify-between gap-2 shadow-[2px_2px_0px_var(--color-border)]">
+                    <div className="min-w-0">
+                      <span className="font-tech text-[9px] uppercase font-bold text-[var(--color-text-muted)] block">
+                        PRIMARY PHONE
+                      </span>
+                      <a
+                        href={`tel:${personalInfo.phone}`}
+                        className="font-tech text-xs font-bold text-[var(--color-text-main)] hover:text-[var(--color-accent-crimson)] transition-colors block"
+                      >
+                        {personalInfo.phone}
+                      </a>
+                    </div>
+                    <button
+                      onClick={() => handleCopyPhone(personalInfo.phone)}
+                      className="p-1.5 bg-[var(--color-card)] hover:bg-[var(--color-pill-bg)] border border-[var(--color-border)] rounded text-xs shrink-0 cursor-pointer"
+                      title="Copy Primary Phone"
+                    >
+                      {copiedPhone === personalInfo.phone ? (
+                        <Check className="w-3.5 h-3.5 text-[var(--color-accent-sage)]" />
+                      ) : (
+                        <Copy className="w-3.5 h-3.5 text-[var(--color-text-main)]" />
+                      )}
+                    </button>
+                  </div>
+
+                  {/* Phone Secondary */}
+                  <div className="bg-[var(--color-card-secondary)] p-3 rounded border border-[var(--color-border)] flex items-center justify-between gap-2 shadow-[2px_2px_0px_var(--color-border)]">
+                    <div className="min-w-0">
+                      <span className="font-tech text-[9px] uppercase font-bold text-[var(--color-text-muted)] block">
+                        SECONDARY PHONE
+                      </span>
+                      <a
+                        href={`tel:${personalInfo.phoneSecondary}`}
+                        className="font-tech text-xs font-bold text-[var(--color-text-main)] hover:text-[var(--color-accent-crimson)] transition-colors block"
+                      >
+                        {personalInfo.phoneSecondary}
+                      </a>
+                    </div>
+                    <button
+                      onClick={() => handleCopyPhone(personalInfo.phoneSecondary)}
+                      className="p-1.5 bg-[var(--color-card)] hover:bg-[var(--color-pill-bg)] border border-[var(--color-border)] rounded text-xs shrink-0 cursor-pointer"
+                      title="Copy Secondary Phone"
+                    >
+                      {copiedPhone === personalInfo.phoneSecondary ? (
+                        <Check className="w-3.5 h-3.5 text-[var(--color-accent-sage)]" />
+                      ) : (
+                        <Copy className="w-3.5 h-3.5 text-[var(--color-text-main)]" />
+                      )}
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Social Channels List */}
               <div className="space-y-3">
                 <h4 className="font-tech text-xs font-bold text-[var(--color-text-muted)] uppercase tracking-wider">
                   SOCIAL CHANNELS &amp; PORTFOLIOS
@@ -121,27 +205,7 @@ export default function Contact() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <a
-                    href={`https://${personalInfo.behance}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-[var(--color-card-secondary)] rounded border border-[var(--color-border)] hover:border-[var(--color-accent-salmon)] hover:translate-y-[-2px] transition-all flex items-center gap-3"
-                  >
-                    <span className="font-display font-extrabold text-xs text-[var(--color-accent-salmon)]">Bē</span>
-                    <span className="font-tech text-xs font-bold uppercase text-[var(--color-text-main)]">BEHANCE</span>
-                  </a>
-
-                  <a
-                    href={`https://${personalInfo.linkedin}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-[var(--color-card-secondary)] rounded border border-[var(--color-border)] hover:border-[var(--color-accent-sage)] hover:translate-y-[-2px] transition-all flex items-center gap-3"
-                  >
-                    <Linkedin className="w-4 h-4 text-[var(--color-accent-sage)]" />
-                    <span className="font-tech text-xs font-bold uppercase text-[var(--color-text-main)]">LINKEDIN</span>
-                  </a>
-
-                  <a
-                    href={`https://${personalInfo.github}`}
+                    href={formatUrl(personalInfo.github)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-[var(--color-card-secondary)] rounded border border-[var(--color-border)] hover:border-[var(--color-accent-yellow)] hover:translate-y-[-2px] transition-all flex items-center gap-3"
@@ -151,13 +215,43 @@ export default function Contact() {
                   </a>
 
                   <a
-                    href={`https://${personalInfo.twitter}`}
+                    href={formatUrl(personalInfo.linkedin)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 bg-[var(--color-card-secondary)] rounded border border-[var(--color-border)] hover:border-[var(--color-accent-sage)] hover:translate-y-[-2px] transition-all flex items-center gap-3"
+                  >
+                    <Linkedin className="w-4 h-4 text-[var(--color-accent-sage)]" />
+                    <span className="font-tech text-xs font-bold uppercase text-[var(--color-text-main)]">LINKEDIN</span>
+                  </a>
+
+                  <a
+                    href={formatUrl(personalInfo.twitter)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-[var(--color-card-secondary)] rounded border border-[var(--color-border)] hover:border-[var(--color-accent-crimson)] hover:translate-y-[-2px] transition-all flex items-center gap-3"
                   >
                     <Twitter className="w-4 h-4 text-[var(--color-accent-crimson)]" />
                     <span className="font-tech text-xs font-bold uppercase text-[var(--color-text-main)]">TWITTER / X</span>
+                  </a>
+
+                  <a
+                    href={formatUrl(personalInfo.facebook)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 bg-[var(--color-card-secondary)] rounded border border-[var(--color-border)] hover:border-[#1877F2] hover:translate-y-[-2px] transition-all flex items-center gap-3"
+                  >
+                    <Facebook className="w-4 h-4 text-[#1877F2]" />
+                    <span className="font-tech text-xs font-bold uppercase text-[var(--color-text-main)]">FACEBOOK</span>
+                  </a>
+
+                  <a
+                    href={formatUrl(personalInfo.behance)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 bg-[var(--color-card-secondary)] rounded border border-[var(--color-border)] hover:border-[var(--color-accent-salmon)] hover:translate-y-[-2px] transition-all flex items-center gap-3 sm:col-span-2"
+                  >
+                    <span className="font-display font-extrabold text-xs text-[var(--color-accent-salmon)]">Bē</span>
+                    <span className="font-tech text-xs font-bold uppercase text-[var(--color-text-main)]">BEHANCE</span>
                   </a>
                 </div>
               </div>
