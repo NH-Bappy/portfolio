@@ -86,11 +86,11 @@ export default function Projects({ onSelectProject }) {
                   </div>
 
                   {/* Thumbnail Image Container */}
-                  <div className="relative aspect-video overflow-hidden border-b-2 border-[var(--color-border)] bg-slate-900">
+                  <div className="relative aspect-video overflow-hidden border-b-2 border-[var(--color-border)] bg-slate-950 flex items-center justify-center">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-contain bg-slate-950 transition-transform duration-700 group-hover:scale-105 p-1"
                     />
 
                     {/* Hover Overlay Button */}

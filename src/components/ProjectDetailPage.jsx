@@ -19,12 +19,13 @@ import { projects } from '../data/portfolioData';
 
 export default function ProjectDetailPage({ project, onBack, onSelectProject }) {
   const [selectedImage, setSelectedImage] = useState(project?.galleryImages?.[0] || project?.image);
-  const [mediaTab, setMediaTab] = useState('video'); // 'video' | 'gallery'
+  const [mediaTab, setMediaTab] = useState('gallery'); // 'gallery' | 'video'
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     if (project) {
       setSelectedImage(project.galleryImages?.[0] || project.image);
+      setMediaTab('gallery');
     }
   }, [project]);
 
@@ -142,17 +143,28 @@ export default function ProjectDetailPage({ project, onBack, onSelectProject }) 
             <div className="space-y-3">
               <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-[var(--color-border)] bg-black shadow-md max-w-3xl mx-auto">
                 {project.videoUrl ? (
-                  <video
-                    src={project.videoUrl}
-                    controls
-                    autoPlay
-                    loop
-                    muted
-                    poster={project.image}
-                    className="w-full h-full object-cover"
-                  >
-                    Your browser does not support HTML5 video demo.
-                  </video>
+                  project.videoUrl.includes('youtube.com') || project.videoUrl.includes('youtu.be') ? (
+                    <iframe
+                      src={project.videoUrl}
+                      title={project.title}
+                      className="w-full h-full border-0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <video
+                      src={project.videoUrl}
+                      controls
+                      autoPlay
+                      loop
+                      muted
+                      poster={project.image}
+                      className="w-full h-full object-cover"
+                    >
+                      Your browser does not support HTML5 video demo.
+                    </video>
+                  )
                 ) : (
                   <img
                     src={project.image}
@@ -168,11 +180,11 @@ export default function ProjectDetailPage({ project, onBack, onSelectProject }) 
           ) : (
             <div className="space-y-4">
               {/* Main Active Image Display */}
-              <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-[var(--color-border)] bg-slate-900 shadow-md max-w-3xl mx-auto">
+              <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-[var(--color-border)] bg-slate-950 shadow-md max-w-3xl mx-auto flex items-center justify-center">
                 <img
                   src={selectedImage}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-all duration-500"
+                  className="w-full h-full object-contain bg-slate-950 transition-all duration-500 p-1"
                 />
               </div>
 
@@ -188,7 +200,7 @@ export default function ProjectDetailPage({ project, onBack, onSelectProject }) 
                         : 'border-[var(--color-border)] opacity-60 hover:opacity-100'
                     }`}
                   >
-                    <img src={imgUrl} alt={`Screenshot ${idx + 1}`} className="w-full h-full object-cover" />
+                    <img src={imgUrl} alt={`Screenshot ${idx + 1}`} className="w-full h-full object-contain bg-slate-950" />
                   </button>
                 ))}
               </div>

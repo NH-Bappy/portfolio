@@ -1,10 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Github, CheckCircle2 } from 'lucide-react';
+import { X, ExternalLink, Github, CheckCircle2, Play, ImageIcon } from 'lucide-react';
 
 export default function ProjectModal({ project, onClose }) {
+  const [activeMediaTab, setActiveMediaTab] = useState('gallery'); // 'gallery' | 'video'
+  const [activeImage, setActiveImage] = useState(project?.galleryImages?.[0] || project?.image);
+
   useEffect(() => {
     if (!project) return;
+
+    setActiveMediaTab('gallery');
+    setActiveImage(project?.galleryImages?.[0] || project?.image);
 
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
@@ -48,23 +54,96 @@ export default function ProjectModal({ project, onClose }) {
           className="relative w-full max-w-4xl retro-card bg-[var(--color-card)] overflow-hidden my-8 cursor-default"
         >
 
-          {/* Modal Header Media Image */}
-          <div className="relative h-64 sm:h-80 overflow-hidden border-b-2 border-[var(--color-border)] bg-gradient-to-r ${project.gradient}">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-card)] via-transparent to-transparent" />
-            <div className="absolute bottom-4 left-6 right-6">
-              <span className="badge-pill bg-[var(--color-accent-crimson)] text-white mb-2 inline-flex border-0">
+          {/* Modal Title Bar */}
+          <div className="p-5 sm:p-6 border-b border-[var(--color-border-subtle)] bg-[var(--color-card-secondary)] flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <span className="badge-pill bg-[var(--color-accent-crimson)] text-white mb-1.5 inline-flex border-0 text-[10px]">
                 ✦ {project.categoryLabel}
               </span>
-              <h3 className="font-display font-extrabold text-2xl sm:text-4xl text-[var(--color-text-main)] drop-shadow-md">
+              <h3 className="font-display font-extrabold text-xl sm:text-3xl text-[var(--color-text-main)]">
                 {project.title}
               </h3>
             </div>
+
+            {/* Media Tab Switcher */}
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setActiveMediaTab('gallery')}
+                className={`px-3 py-1 rounded-full border border-[var(--color-border)] font-tech text-xs font-bold uppercase transition-all cursor-pointer flex items-center gap-1.5 ${
+                  activeMediaTab === 'gallery'
+                    ? 'bg-[var(--color-accent-salmon)] text-white shadow-[2px_2px_0px_var(--color-border)]'
+                    : 'bg-[var(--color-card)] text-[var(--color-text-main)] hover:bg-[var(--color-pill-bg)]'
+                }`}
+              >
+                <ImageIcon className="w-3.5 h-3.5" />
+                <span>Screenshots ({project.galleryImages?.length || 1})</span>
+              </button>
+              {project.videoUrl && (
+                <button
+                  onClick={() => setActiveMediaTab('video')}
+                  className={`px-3 py-1 rounded-full border border-[var(--color-border)] font-tech text-xs font-bold uppercase transition-all cursor-pointer flex items-center gap-1.5 ${
+                    activeMediaTab === 'video'
+                      ? 'bg-[var(--color-accent-salmon)] text-white shadow-[2px_2px_0px_var(--color-border)]'
+                      : 'bg-[var(--color-card)] text-[var(--color-text-main)] hover:bg-[var(--color-pill-bg)]'
+                  }`}
+                >
+                  <Play className="w-3.5 h-3.5" />
+                  <span>Video Demo</span>
+                </button>
+              )}
+            </div>
           </div>
+
+          {/* Modal Media Showcase (Screenshots / Video) */}
+          <div className="relative aspect-video w-full overflow-hidden border-b-2 border-[var(--color-border)] bg-slate-950 flex items-center justify-center">
+            {activeMediaTab === 'video' && project.videoUrl ? (
+              project.videoUrl.includes('youtube.com') || project.videoUrl.includes('youtu.be') ? (
+                <iframe
+                  src={project.videoUrl}
+                  title={project.title}
+                  className="w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              ) : (
+                <video
+                  src={project.videoUrl}
+                  controls
+                  autoPlay
+                  loop
+                  muted
+                  poster={project.image}
+                  className="w-full h-full object-contain bg-slate-950"
+                />
+              )
+            ) : (
+              <img
+                src={activeImage || project.image}
+                alt={project.title}
+                className="w-full h-full object-contain bg-slate-950 p-1"
+              />
+            )}
+          </div>
+
+          {/* Thumbnails Bar for Gallery View */}
+          {activeMediaTab === 'gallery' && project.galleryImages && project.galleryImages.length > 1 && (
+            <div className="p-3 bg-[var(--color-card-secondary)] border-b border-[var(--color-border-subtle)] flex items-center justify-center gap-3 overflow-x-auto">
+              {project.galleryImages.map((img, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setActiveImage(img)}
+                  className={`relative h-14 aspect-video rounded border-2 overflow-hidden transition-all cursor-pointer ${
+                    activeImage === img
+                      ? 'border-[var(--color-accent-salmon)] scale-105 shadow-[2px_2px_0px_var(--color-border)]'
+                      : 'border-[var(--color-border)] opacity-60 hover:opacity-100'
+                  }`}
+                >
+                  <img src={img} alt={`Thumb ${idx + 1}`} className="w-full h-full object-contain bg-slate-950" />
+                </button>
+              ))}
+            </div>
+          )}
 
           {/* Modal Body */}
           <div className="p-6 sm:p-8 space-y-6">
