@@ -37,10 +37,30 @@ export const marqueeItems = [
 
 export const experiences = [
   {
-    period: "September 2023 - Present",
-    role: "Freelance Creative Engineer & DA Junior",
-    company: "UPMI PRODUCTION, BRAVE PARKS, LACOSTE, SHINY BEESBEE",
-    description: "Designing graphic charters, visual identities, character designs, website prototypes, and full-stack interactive motion web apps for high-profile clients."
+    period: "July 2026",
+    role: "Smart RFID Library Management System (Physical IoT)",
+    company: "Full-Stack IoT & Hardware System Project",
+    description: "An end-to-end physical IoT library management system powered by an ESP32 RFID scanner, Node.js/Express backend, PostgreSQL database, and a real-time React web dashboard.",
+    points: [
+      "Hardware Unit (IoT): Programmed ESP32 NodeMCU with RC522 RFID reader, 16x2 I2C LCD display, audio buzzer, and dual LEDs for physical instant scan feedback.",
+      "Backend & Database: Built Node.js & Express REST APIs with PostgreSQL database managed via Prisma ORM, securing admin endpoints using JWT and Bcrypt encryption.",
+      "Real-Time WebSockets: Implemented Socket.IO (v4) to instantly broadcast physical RFID card and book tag scans from the scanner to the web UI without page refreshes.",
+      "Live React Dashboard: Designed a real-time web application using React 19, Tailwind CSS, Recharts for analytics, and Framer Motion for micro-animations.",
+      "Automated Workflows: Automated book borrowing, returning, overdue tracking, and student RFID tag assignment with real-time physical status feedback."
+    ],
+    techStack: [
+      "ESP32 C++",
+      "RC522 RFID",
+      "LiquidCrystal I2C",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Socket.IO",
+      "React 19",
+      "Tailwind CSS",
+      "JWT"
+    ]
   },
   {
     period: "January 2023 - August 2023",
@@ -215,52 +235,53 @@ export const skillSections = [
 export const projects = [
   {
     id: "proj-1",
-    title: "Aura Cinematic - Mythic Poster Engine",
-    subtitle: "Dark Neo-Retro Web Application",
+    title: "Smart RFID Library Management System",
+    subtitle: "Full-Stack IoT & Real-Time Library Automation System",
     category: "web",
-    categoryLabel: "Web App & Motion",
+    categoryLabel: "Full-Stack IoT System",
     year: "2026",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
-    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-abstract-digital-technology-background-41554-large.mp4",
+    image: "/rfid-dashboard.png",
+    videoUrl: "https://www.youtube.com/embed/3fChLYZ_kqY?si=xvrjo3TYUU7q5JpM",
     galleryImages: [
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000&auto=format&fit=crop"
+      "/rfid-dashboard.png",
+      "/rfid-console.png",
+      "/rfid-students.png"
     ],
-    gradient: "from-emerald-950 via-teal-900 to-rose-950",
-    tags: ["React 19", "Vite", "GSAP", "Tailwind CSS", "Canvas"],
-    description: "An interactive storytelling poster engine combining high-speed React rendering with canvas shader particle effects and vintage typography layouts.",
-    aboutDetail: "Aura Cinematic was born out of a desire to merge 1970s editorial poster art with modern high-performance WebGL animations. The goal was to build a full-featured web app where users could customize retro film poster layouts with live canvas particle effects, dynamic typography scaling, and real-time color palette controls.",
+    gradient: "from-blue-950 via-teal-900 to-indigo-950",
+    tags: ["ESP32 C++", "RC522 RFID", "Node.js", "Express", "PostgreSQL", "Prisma ORM", "Socket.IO", "React 19", "Tailwind CSS", "JWT"],
+    description: "An end-to-end Full-Stack IoT Library Management System powered by an ESP32 RFID scanner, Node.js/Express backend, PostgreSQL database, and a real-time React web dashboard.",
+    aboutDetail: "The Smart RFID Library Management System eliminates manual paper logs and long lines at libraries. Students swipe smart RFID keycards on an ESP32 scanner at the counter while books carry RFID tags. The ESP32 extracts tag UIDs over Wi-Fi, queries the PostgreSQL database via Prisma ORM, emits live WebSocket events to the React web dashboard, and displays real-time physical feedback via a 16x2 LCD display, buzzer sound signals, and status LEDs.",
     whatIUsed: [
       {
-        category: "Front-End & Logic",
-        tools: ["React 19", "Vite JS", "JavaScript ES6+"],
-        description: "Core component structure, reactive state management, and lightning-fast Vite bundler."
+        category: "Hardware & Microcontroller (IoT)",
+        tools: ["ESP32 NodeMCU", "RC522 RFID Reader", "LiquidCrystal 16x2 I2C", "Buzzer & Dual LEDs", "Arduino C++"],
+        description: "Physical scanning unit communicating over Wi-Fi via HTTP POST with real-time LCD screen and audio status feedback."
       },
       {
-        category: "Animations & Graphics",
-        tools: ["GSAP 3", "Framer Motion", "HTML5 Canvas Shader"],
-        description: "60fps liquid motion physics, hero entrance animations, and particle background math."
+        category: "Backend & Database",
+        tools: ["Node.js", "Express.js v5", "PostgreSQL", "Prisma ORM", "Socket.IO v4", "JWT & Bcrypt"],
+        description: "RESTful API endpoints, real-time WebSocket event broadcasting, relational database schema, and secure admin authentication."
       },
       {
-        category: "Styling & UI Systems",
-        tools: ["Tailwind CSS v4", "Custom Design Tokens", "Google Fonts"],
-        description: "Custom dark neo-retro color tokens, typography scales, and responsive grid layouts."
+        category: "Frontend Web Dashboard",
+        tools: ["React 19", "Vite", "Tailwind CSS v4", "Socket.IO Client", "Lucide React", "Framer Motion", "Recharts"],
+        description: "Live interactive dashboard receiving instantaneous scan events, statistical charts, overdue alerts, and catalog management."
       }
     ],
     impact: [
-      { metric: "60 FPS", label: "Fluid Animation Performance" },
-      { metric: "+85%", label: "Faster Initial Page Load Speed" },
-      { metric: "100%", label: "Responsive Layout Across Devices" },
-      { metric: "4.9/5", label: "User Satisfaction Score" }
+      { metric: "Real-Time", label: "Instant Socket.IO Sync from Hardware to Web" },
+      { metric: "100%", label: "Automated Borrowing & Returning Process" },
+      { metric: "< 500ms", label: "Physical RFID Scan & LCD Response Time" },
+      { metric: "PostgreSQL", label: "Type-Safe Relational DB via Prisma ORM" }
     ],
     highlights: [
-      "Custom WebGL shader background inspired by retro comic ink",
-      "Dynamic typography engine with real-time text deformation",
-      "Instant response 60fps Framer Motion layout transitions"
+      "Automated RFID Checkout: Tap RFID student card or book tag to borrow or return books instantly.",
+      "Real-Time WebSocket Synchronization: Socket.IO notifies the web app as soon as a card is scanned.",
+      "Physical Status Feedback: Audio buzzer beeps, dual red/green LEDs signal, and 16x2 LCD display updates instantly on hardware.",
+      "Secure Admin Access & Analytics: JWT authentication for managing catalog, tracking overdue books, and monitoring analytics charts."
     ],
-    liveUrl: "https://example.com/aura",
-    githubUrl: "https://github.com/example/aura"
+    liveUrl: "https://full-stack-app-orcin.vercel.app/",
+    githubUrl: "https://github.com/NH-Bappy/full-stack-app"
   },
   {
     id: "proj-2",
