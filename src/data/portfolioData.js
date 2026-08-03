@@ -323,45 +323,45 @@ export const projects = [
   },
   {
     id: "proj-2",
-    title: "Crimson Odyssey - Game Art & UI System",
-    subtitle: "Concept Art & Interactive Design System",
-    category: "motion",
-    categoryLabel: "Game & 3D Art",
-    year: "2025",
-    image: "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=1000&auto=format&fit=crop",
+    title: "Personal Movie Tracker",
+    subtitle: "Full-Stack Movie Discovery & Kanban Watchlist App",
+    category: "web",
+    categoryLabel: "Full-Stack Web App",
+    year: "2026",
+    image: "/movie-tracker-home.png",
     galleryImages: [
-      "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=1000&auto=format&fit=crop"
+      "/movie-tracker-home.png"
     ],
     gradient: "from-rose-950 via-crimson-900 to-amber-950",
-    tags: ["Figma", "Blender", "After Effects", "Photoshop"],
-    description: "A complete character & environment graphic design system built for an indie mythic adventure RPG, complete with HUD UI components and animated menus.",
-    aboutDetail: "Crimson Odyssey is a comprehensive visual design system crafted for a dark mythic RPG. It covers character sheet vector concepts, weapon icons, health HUD gauges, inventory matrices, and 3D environment turnaround videos rendered in Blender.",
+    tags: ["React 19", "Vite", "Node.js", "Express", "Prisma ORM", "PostgreSQL", "Neon DB", "JWT", "Zod", "TMDB API", "Tailwind CSS"],
+    description: "A full-stack, responsive web application for searching movies, viewing cinematic details, and tracking your movie-watching progress with a categorized Kanban-style watchlist.",
+    aboutDetail: "Personal Movie Tracker is an interactive full-stack movie management and discovery platform. The application automatically resolves TMDB movie metadata and synchronizes it with a cloud PostgreSQL database (hosted on Neon DB via Prisma ORM) when authenticated, offering a fallback local-storage experience for guests. Users can browse popular movies, search dynamically, inspect rich movie backdrops, and organize their watch progress across 4 Kanban columns (Plan to Watch, Watching, Completed, Dropped).",
     whatIUsed: [
       {
-        category: "UI/UX & Design Systems",
-        tools: ["Figma", "Adobe Illustrator", "Photoshop"],
-        description: "Vector UI component kits, dark mythic color palettes, and HUD elements."
+        category: "Frontend Architecture & UI",
+        tools: ["React 19", "Vite", "React Router DOM v7", "Custom CSS", "Glassmorphism"],
+        description: "Responsive cinema UI system featuring dynamic backdrop overlays, TMDB API integration, live search filtering, and Kanban board components."
       },
       {
-        category: "3D & Motion Production",
-        tools: ["Blender 3D", "After Effects", "EEVEE Engine"],
-        description: "3D character turntables, UI micro-interaction teasers, and particle VFX."
+        category: "Backend, Database & Security",
+        tools: ["Node.js", "Express.js", "Prisma Client ORM", "Serverless PostgreSQL (Neon DB)", "JWT", "BcryptJS", "Zod"],
+        description: "RESTful API endpoints with schema validation, hybrid TMDB metadata sync in local DB, JWT authentication, and secure watchlist management."
       }
     ],
     impact: [
-      { metric: "40+", label: "Unique Vector Character Assets" },
-      { metric: "120+", label: "Figma Design Components" },
-      { metric: "3D Turnarounds", label: "Fully Rendered Blender Models" }
+      { metric: "TMDB API", label: "Dynamic Movie Metadata & Backdrop Overlays" },
+      { metric: "4 Columns", label: "Kanban-Style Watchlist Progress Tracker" },
+      { metric: "Hybrid Sync", label: "Cloud PostgreSQL Sync & Guest Fallback" },
+      { metric: "JWT & Bcrypt", label: "Secure User Auth & Persistent Sessions" }
     ],
     highlights: [
-      "Designed over 40+ unique vector character concepts & armor sets",
-      "Interactive Figma component library with dark/light variants",
-      "Rendered 3D environment turnarounds in Blender & EEVEE engine"
+      "User Authentication & Profiles: Safe JWT authentication flow with password hashing (BcryptJS) and persistent session management.",
+      "Immersive Movie Discovery: Renders popular movies from TMDB API with dynamic search and instant watchlist status indicators.",
+      "Cinematic Details Page: High-quality backdrop overlays, release year, runtime, ratings, genre tags, and inline watch state controls.",
+      "Kanban Watchlist Dashboard: Group movies into 4 columns (Plan to Watch, Watching, Completed, Dropped) with real-time PostgreSQL database sync."
     ],
-    liveUrl: "https://example.com/crimson",
-    githubUrl: "https://github.com/example/crimson"
+    liveUrl: "https://personal-movie-tracker-absm.vercel.app/",
+    githubUrl: "https://github.com/NH-Bappy/personal_movie_tracker"
   },
   {
     id: "proj-3",
