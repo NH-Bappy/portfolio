@@ -280,7 +280,6 @@ export const projects = [
     categoryLabel: "Full-Stack IoT System",
     year: "2026",
     image: "/rfid-dashboard.png",
-    videoUrl: "https://www.youtube.com/embed/3fChLYZ_kqY?si=xvrjo3TYUU7q5JpM",
     galleryImages: [
       "/rfid-dashboard.png",
       "/rfid-console.png",
@@ -330,7 +329,6 @@ export const projects = [
     categoryLabel: "Game & 3D Art",
     year: "2025",
     image: "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=1000&auto=format&fit=crop",
-    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4",
     galleryImages: [
       "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=1000&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1000&auto=format&fit=crop",
@@ -373,7 +371,6 @@ export const projects = [
     categoryLabel: "Full-Stack Web App",
     year: "2025",
     image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=1000&auto=format&fit=crop",
-    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-vertical-video-of-a-futuristic-city-43285-large.mp4",
     galleryImages: [
       "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=1000&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000&auto=format&fit=crop",
@@ -416,7 +413,6 @@ export const projects = [
     categoryLabel: "3D & Motion",
     year: "2024",
     image: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1000&auto=format&fit=crop",
-    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-screens-41553-large.mp4",
     galleryImages: [
       "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1000&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",

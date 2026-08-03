@@ -4,7 +4,6 @@ import {
   ArrowLeft,
   ExternalLink,
   Github,
-  Video,
   Image as ImageIcon,
   Wrench,
   TrendingUp,
@@ -12,20 +11,17 @@ import {
   CheckCircle2,
   ChevronRight,
   ChevronLeft,
-  Play,
   Sparkles
 } from 'lucide-react';
 import { projects } from '../data/portfolioData';
 
 export default function ProjectDetailPage({ project, onBack, onSelectProject }) {
   const [selectedImage, setSelectedImage] = useState(project?.galleryImages?.[0] || project?.image);
-  const [mediaTab, setMediaTab] = useState('gallery'); // 'gallery' | 'video'
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     if (project) {
       setSelectedImage(project.galleryImages?.[0] || project.image);
-      setMediaTab('gallery');
     }
   }, [project]);
 
@@ -96,6 +92,7 @@ export default function ProjectDetailPage({ project, onBack, onSelectProject }) 
             {project.subtitle}
           </p>
         </motion.div>        {/* 1. MEDIA SHOWCASE (Place for Video & Images) - Compact Size */}
+        {/* 1. MEDIA SHOWCASE (Screenshots Gallery) - Compact Size */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -103,106 +100,43 @@ export default function ProjectDetailPage({ project, onBack, onSelectProject }) 
           transition={{ duration: 0.5 }}
           className="retro-card p-5 sm:p-6 space-y-5 max-w-4xl mx-auto w-full"
         >
-          {/* Media Header & Tab Switcher */}
+          {/* Media Header */}
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[var(--color-border-subtle)] pb-3">
             <div className="flex items-center gap-2">
-              <Video className="w-4 h-4 text-[var(--color-accent-salmon)]" />
+              <ImageIcon className="w-4 h-4 text-[var(--color-accent-salmon)]" />
               <h2 className="font-display font-bold text-lg sm:text-xl uppercase tracking-tight text-[var(--color-text-main)]">
-                ✦ MEDIA SHOWCASE &amp; DEMO
+                ✦ SCREENSHOTS GALLERY ({project.galleryImages?.length || 1})
               </h2>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => setMediaTab('video')}
-                className={`px-3.5 py-1 rounded-full border-2 border-[var(--color-border)] font-tech text-xs font-bold uppercase transition-all cursor-pointer flex items-center gap-1.5 ${mediaTab === 'video'
-                  ? 'bg-[var(--color-accent-salmon)] text-white shadow-[2px_2px_0px_var(--color-border)]'
-                  : 'bg-[var(--color-card-secondary)] text-[var(--color-text-main)] hover:bg-[var(--color-pill-bg)]'
-                  }`}
-              >
-                <Play className="w-3 h-3" />
-                <span>Video Demo</span>
-              </button>
-              <button
-                onClick={() => setMediaTab('gallery')}
-                className={`px-3.5 py-1 rounded-full border-2 border-[var(--color-border)] font-tech text-xs font-bold uppercase transition-all cursor-pointer flex items-center gap-1.5 ${mediaTab === 'gallery'
-                  ? 'bg-[var(--color-accent-salmon)] text-white shadow-[2px_2px_0px_var(--color-border)]'
-                  : 'bg-[var(--color-card-secondary)] text-[var(--color-text-main)] hover:bg-[var(--color-pill-bg)]'
-                  }`}
-              >
-                <ImageIcon className="w-3 h-3" />
-                <span>Screenshots Gallery ({project.galleryImages?.length || 1})</span>
-              </button>
             </div>
           </div>
 
           {/* Media Display Area */}
-          {mediaTab === 'video' ? (
-            <div className="space-y-3">
-              <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-[var(--color-border)] bg-black shadow-md max-w-3xl mx-auto">
-                {project.videoUrl ? (
-                  project.videoUrl.includes('youtube.com') || project.videoUrl.includes('youtu.be') ? (
-                    <iframe
-                      src={project.videoUrl}
-                      title={project.title}
-                      className="w-full h-full border-0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                    />
-                  ) : (
-                    <video
-                      src={project.videoUrl}
-                      controls
-                      autoPlay
-                      loop
-                      muted
-                      poster={project.image}
-                      className="w-full h-full object-cover"
-                    >
-                      Your browser does not support HTML5 video demo.
-                    </video>
-                  )
-                ) : (
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                  />
-                )}
-              </div>
-              <p className="font-tech text-[11px] text-[var(--color-text-muted)] text-center uppercase tracking-wider">
-                ✦ High-Definition Interactive Video Walkthrough &amp; Motion Teaser
-              </p>
+          <div className="space-y-4">
+            {/* Main Active Image Display */}
+            <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-[var(--color-border)] bg-slate-950 shadow-md max-w-3xl mx-auto flex items-center justify-center">
+              <img
+                src={selectedImage}
+                alt={project.title}
+                className="w-full h-full object-contain bg-slate-950 transition-all duration-500 p-1"
+              />
             </div>
-          ) : (
-            <div className="space-y-4">
-              {/* Main Active Image Display */}
-              <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-[var(--color-border)] bg-slate-950 shadow-md max-w-3xl mx-auto flex items-center justify-center">
-                <img
-                  src={selectedImage}
-                  alt={project.title}
-                  className="w-full h-full object-contain bg-slate-950 transition-all duration-500 p-1"
-                />
-              </div>
 
-              {/* Thumbnails Gallery Strip */}
-              <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 max-w-3xl mx-auto">
-                {project.galleryImages?.map((imgUrl, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setSelectedImage(imgUrl)}
-                    className={`relative aspect-video rounded-md overflow-hidden border-2 transition-all cursor-pointer ${selectedImage === imgUrl
-                      ? 'border-[var(--color-accent-salmon)] scale-105 shadow-[2px_2px_0px_var(--color-border)]'
-                      : 'border-[var(--color-border)] opacity-60 hover:opacity-100'
-                      }`}
-                  >
-                    <img src={imgUrl} alt={`Screenshot ${idx + 1}`} className="w-full h-full object-contain bg-slate-950" />
-                  </button>
-                ))}
-              </div>
+            {/* Thumbnails Gallery Strip */}
+            <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 max-w-3xl mx-auto">
+              {project.galleryImages?.map((imgUrl, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setSelectedImage(imgUrl)}
+                  className={`relative aspect-video rounded-md overflow-hidden border-2 transition-all cursor-pointer ${selectedImage === imgUrl
+                    ? 'border-[var(--color-accent-salmon)] scale-105 shadow-[2px_2px_0px_var(--color-border)]'
+                    : 'border-[var(--color-border)] opacity-60 hover:opacity-100'
+                    }`}
+                >
+                  <img src={imgUrl} alt={`Screenshot ${idx + 1}`} className="w-full h-full object-contain bg-slate-950" />
+                </button>
+              ))}
             </div>
-          )}
+          </div>
         </motion.section>
 
         {/* 2-Column Content Grid: About + Impact & What I Used */}
