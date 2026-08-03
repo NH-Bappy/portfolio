@@ -91,10 +91,27 @@ export const experiences = [
     ]
   },
   {
-    period: "September 2021 - November 2022",
-    role: "UI/UX Designer & Illustrator",
-    company: "TPAT-SANK",
-    description: "Engineered web page graphic mockups, vector brand iconography, user flows, and interactive React component design systems."
+    period: "2025 - 2026",
+    role: "macOS Web OS & Interactive Collaborative Workspace",
+    company: "Interactive Virtual Operating System & Web Desktop App",
+    description: "A modern, high-performance macOS-inspired Web Desktop Application built with React 19, Vite, Tailwind CSS v4, GSAP, and Zustand, providing an interactive virtual operating system interface for developers to register and showcase custom tools, applications, and external websites.",
+    points: [
+      "OS Kernel & Plugin System Architecture: Architected an open desktop ecosystem separating core OS kernel (window management, z-index layering, taskbar) from modular user application plugins.",
+      "GSAP-React Window Synchronization: Solved complex state-animation syncing using a WindowWrapper Higher-Order Component (HOC) and GSAP Draggable for 60fps physics-based window manipulation.",
+      "Zustand Global State Engine: Built centralized immutable state management via Zustand & Immer to control window lifecycles, dynamic z-index focus depth stacking, and Finder filesystem tree navigation.",
+      "Native Desktop App Suite: Developed interactive built-in applications including Finder file manager, Safari browser, Terminal CLI emulator, Calculator, Photos gallery, and PDF renderers.",
+      "Multi-Pattern Integration Engine: Built 4 integration models enabling contributors to embed native React tools, sandboxed iframe web apps, desktop launchers, and dynamic Finder file extensions."
+    ],
+    techStack: [
+      "React 19",
+      "Vite 7",
+      "Tailwind CSS v4",
+      "GSAP & Draggable",
+      "Zustand & Immer",
+      "Lucide React",
+      "React PDF",
+      "Day.js"
+    ]
   }
 ];
 
