@@ -64,25 +64,12 @@ export default function ProjectModal({ project, onClose }) {
             </div>
           </div>
 
-          {/* Modal Media Showcase (Screenshots Gallery inside Simulated Browser Frame) */}
+          {/* Modal Media Showcase (Screenshots Gallery) */}
           <div className="relative aspect-video w-full overflow-hidden border-b-2 border-[var(--color-border)] bg-slate-950 flex items-center justify-center">
-            {/* Simulated Browser Top Bar */}
-            <div className="absolute top-0 left-0 right-0 z-10 px-4 py-2 bg-[var(--color-card-secondary)]/95 backdrop-blur border-b border-[var(--color-border)] flex items-center justify-between font-tech text-[11px] select-none">
-              <div className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-red-500 inline-block border border-black/20" />
-                <span className="w-2.5 h-2.5 rounded-full bg-yellow-500 inline-block border border-black/20" />
-                <span className="w-2.5 h-2.5 rounded-full bg-green-500 inline-block border border-black/20" />
-              </div>
-              <span className="text-[var(--color-text-muted)] truncate max-w-[200px] sm:max-w-xs">
-                https://{project.liveUrl ? project.liveUrl.replace(/^https?:\/\//, '') : 'demo.com'}
-              </span>
-              <span className="text-[9px] uppercase font-bold text-[var(--color-accent-salmon)]">✦ CASE STUDY</span>
-            </div>
-
             <img
               src={activeImage || project.image}
               alt={project.title}
-              className="w-full h-full object-contain bg-slate-950 p-1 pt-8"
+              className="w-full h-full object-contain bg-slate-950 p-1"
             />
           </div>
 
