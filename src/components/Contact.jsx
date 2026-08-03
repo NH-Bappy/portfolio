@@ -96,13 +96,13 @@ export default function Contact() {
               </div>
 
               {/* Copy Email Box */}
-              <div className="bg-[var(--color-card-secondary)] p-4 rounded-md border-2 border-[var(--color-border)] flex items-center justify-between gap-3 shadow-[2px_2px_0px_var(--color-border)]">
-                <div className="flex items-center gap-3 min-w-0">
+              <div className="bg-[var(--color-card-secondary)] p-3.5 sm:p-4 rounded-md border-2 border-[var(--color-border)] flex items-center justify-between gap-2.5 shadow-[2px_2px_0px_var(--color-border)]">
+                <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1">
                   <div className="p-2 rounded bg-[var(--color-accent-crimson)] text-white shrink-0">
-                    <Mail className="w-5 h-5" />
+                    <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <div className="min-w-0">
-                    <span className="font-tech text-[10px] uppercase font-bold text-[var(--color-text-muted)] block">
+                  <div className="min-w-0 flex-1">
+                    <span className="font-tech text-[9px] sm:text-[10px] uppercase font-bold text-[var(--color-text-muted)] block">
                       EMAIL ADDRESS
                     </span>
                     <a
@@ -116,7 +116,7 @@ export default function Contact() {
 
                 <button
                   onClick={handleCopyEmail}
-                  className="px-3 py-1.5 bg-[var(--color-card)] hover:bg-[var(--color-pill-bg)] border border-[var(--color-border)] rounded text-xs font-tech font-bold uppercase tracking-wider flex items-center gap-1.5 shrink-0 transition-colors cursor-pointer"
+                  className="px-2.5 sm:px-3 py-1.5 bg-[var(--color-card)] hover:bg-[var(--color-pill-bg)] border border-[var(--color-border)] rounded text-[11px] sm:text-xs font-tech font-bold uppercase tracking-wider flex items-center gap-1.5 shrink-0 transition-colors cursor-pointer"
                 >
                   {copied ? (
                     <>

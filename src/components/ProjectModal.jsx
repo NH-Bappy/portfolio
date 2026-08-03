@@ -64,12 +64,25 @@ export default function ProjectModal({ project, onClose }) {
             </div>
           </div>
 
-          {/* Modal Media Showcase (Screenshots Gallery) */}
+          {/* Modal Media Showcase (Screenshots Gallery inside Simulated Browser Frame) */}
           <div className="relative aspect-video w-full overflow-hidden border-b-2 border-[var(--color-border)] bg-slate-950 flex items-center justify-center">
+            {/* Simulated Browser Top Bar */}
+            <div className="absolute top-0 left-0 right-0 z-10 px-4 py-2 bg-[var(--color-card-secondary)]/95 backdrop-blur border-b border-[var(--color-border)] flex items-center justify-between font-tech text-[11px] select-none">
+              <div className="flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-red-500 inline-block border border-black/20" />
+                <span className="w-2.5 h-2.5 rounded-full bg-yellow-500 inline-block border border-black/20" />
+                <span className="w-2.5 h-2.5 rounded-full bg-green-500 inline-block border border-black/20" />
+              </div>
+              <span className="text-[var(--color-text-muted)] truncate max-w-[200px] sm:max-w-xs">
+                https://{project.liveUrl ? project.liveUrl.replace(/^https?:\/\//, '') : 'demo.com'}
+              </span>
+              <span className="text-[9px] uppercase font-bold text-[var(--color-accent-salmon)]">✦ CASE STUDY</span>
+            </div>
+
             <img
               src={activeImage || project.image}
               alt={project.title}
-              className="w-full h-full object-contain bg-slate-950 p-1"
+              className="w-full h-full object-contain bg-slate-950 p-1 pt-8"
             />
           </div>
 
@@ -138,15 +151,15 @@ export default function ProjectModal({ project, onClose }) {
             )}
 
             {/* Actions */}
-            <div className="pt-6 border-t-2 border-[var(--color-border)] flex flex-wrap items-center justify-between gap-4">
-              <div className="flex flex-wrap gap-4">
+            <div className="pt-6 border-t-2 border-[var(--color-border)] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <a
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-2.5 bg-[var(--color-accent-crimson)] text-white font-tech font-bold text-xs uppercase tracking-wider rounded border-2 border-[var(--color-border)] shadow-[3px_3px_0px_var(--color-border)] hover:translate-y-[-2px] hover:shadow-[5px_5px_0px_var(--color-border)] transition-all flex items-center gap-2"
+                  className="px-6 py-2.5 bg-[var(--color-accent-crimson)] text-white font-tech font-bold text-xs uppercase tracking-wider rounded border-2 border-[var(--color-border)] shadow-[3px_3px_0px_var(--color-border)] hover:translate-y-[-2px] hover:shadow-[5px_5px_0px_var(--color-border)] transition-all flex items-center justify-center gap-2"
                 >
-                  <ExternalLink className="w-4 h-4" />
+                  <ExternalLink className="w-4 h-4 shrink-0" />
                   <span>Visit Live Demo</span>
                 </a>
 
@@ -154,18 +167,18 @@ export default function ProjectModal({ project, onClose }) {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-2.5 bg-[var(--color-card-secondary)] text-[var(--color-text-main)] font-tech font-bold text-xs uppercase tracking-wider rounded border-2 border-[var(--color-border)] shadow-[3px_3px_0px_var(--color-border)] hover:translate-y-[-2px] hover:shadow-[5px_5px_0px_var(--color-border)] transition-all flex items-center gap-2"
+                  className="px-6 py-2.5 bg-[var(--color-card-secondary)] text-[var(--color-text-main)] font-tech font-bold text-xs uppercase tracking-wider rounded border-2 border-[var(--color-border)] shadow-[3px_3px_0px_var(--color-border)] hover:translate-y-[-2px] hover:shadow-[5px_5px_0px_var(--color-border)] transition-all flex items-center justify-center gap-2"
                 >
-                  <Github className="w-4 h-4" />
+                  <Github className="w-4 h-4 shrink-0" />
                   <span>View Source Code</span>
                 </a>
               </div>
 
               <button
                 onClick={onClose}
-                className="px-6 py-2.5 bg-[var(--color-pill-bg)] text-[var(--color-text-main)] font-tech font-bold text-xs uppercase tracking-wider rounded border-2 border-[var(--color-border)] hover:bg-[var(--color-accent-crimson)] hover:text-white transition-all cursor-pointer flex items-center gap-2"
+                className="px-6 py-2.5 bg-[var(--color-pill-bg)] text-[var(--color-text-main)] font-tech font-bold text-xs uppercase tracking-wider rounded border-2 border-[var(--color-border)] hover:bg-[var(--color-accent-crimson)] hover:text-white transition-all cursor-pointer flex items-center justify-center gap-2"
               >
-                <X className="w-4 h-4" />
+                <X className="w-4 h-4 shrink-0" />
                 <span>Close Window</span>
               </button>
             </div>

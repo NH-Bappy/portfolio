@@ -26,10 +26,10 @@ export default function AboutExperience() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="retro-card p-6 sm:p-10">
+          <div className="retro-card p-5 sm:p-10">
             <div className="flex items-center gap-2 mb-8 border-b border-[var(--color-border-subtle)] pb-4">
-              <Briefcase className="w-6 h-6 text-[var(--color-accent-crimson)]" />
-              <h3 className="font-display font-bold text-2xl uppercase tracking-tight text-[var(--color-text-main)]">
+              <Briefcase className="w-6 h-6 text-[var(--color-accent-crimson)] shrink-0" />
+              <h3 className="font-display font-bold text-xl sm:text-2xl uppercase tracking-tight text-[var(--color-text-main)]">
                 ✦ PROFESSIONAL EXPERIENCE
               </h3>
             </div>
@@ -38,16 +38,16 @@ export default function AboutExperience() {
               {experiences.map((exp, idx) => (
                 <div
                   key={idx}
-                  className="relative pl-6 sm:pl-8 border-l-2 border-[var(--color-accent-crimson)] group"
+                  className="relative pl-5 sm:pl-8 border-l-2 border-[var(--color-accent-crimson)] group"
                 >
                   {/* Timeline Dot */}
                   <div className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-[var(--color-accent-crimson)] border border-[var(--color-card)] group-hover:scale-125 transition-transform" />
 
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-1">
-                    <h4 className="font-display font-extrabold text-lg sm:text-2xl text-[var(--color-text-main)]">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-1.5">
+                    <h4 className="font-display font-extrabold text-base sm:text-2xl text-[var(--color-text-main)]">
                       {exp.role}
                     </h4>
-                    <span className="font-tech text-xs font-bold text-[var(--color-accent-salmon)] uppercase tracking-wider bg-[var(--color-card-secondary)] px-3 py-1 rounded border border-[var(--color-border-subtle)] w-fit">
+                    <span className="font-tech text-[11px] sm:text-xs font-bold text-[var(--color-accent-salmon)] uppercase tracking-wider bg-[var(--color-card-secondary)] px-3 py-1 rounded border border-[var(--color-border-subtle)] w-fit shrink-0">
                       ✦ {exp.period}
                     </span>
                   </div>

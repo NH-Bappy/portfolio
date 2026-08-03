@@ -25,7 +25,7 @@ export default function EducationCertification() {
           </div>
 
           {/* Filter Tabs */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex items-center overflow-x-auto no-scrollbar gap-2 pb-1 md:pb-0">
             {[
               { id: 'all', label: 'All Credentials' },
               { id: 'education', label: 'Education' },
@@ -34,7 +34,7 @@ export default function EducationCertification() {
               <button
                 key={tab.id}
                 onClick={() => setActiveFilter(tab.id)}
-                className={`px-4 py-2 rounded-full border-2 border-[var(--color-border)] font-tech text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${activeFilter === tab.id
+                className={`px-4 py-2 rounded-full border-2 border-[var(--color-border)] font-tech text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap shrink-0 ${activeFilter === tab.id
                   ? 'bg-[var(--color-accent-crimson)] text-white shadow-[3px_3px_0px_var(--color-border)]'
                   : 'bg-[var(--color-card)] text-[var(--color-text-main)] hover:bg-[var(--color-pill-bg)]'
                   }`}
@@ -58,14 +58,14 @@ export default function EducationCertification() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.3, delay: idx * 0.05 }}
-                  className="retro-card p-6 sm:p-8 flex flex-col justify-between relative group hover:border-[var(--color-accent-crimson)] transition-colors"
+                  className="retro-card p-5 sm:p-8 flex flex-col justify-between relative group hover:border-[var(--color-accent-crimson)] transition-colors"
                 >
                   <div>
                     {/* Header Row */}
-                    <div className="flex items-start justify-between gap-4 mb-4">
-                      <div className="flex items-center gap-3.5">
+                    <div className="flex flex-wrap sm:flex-nowrap items-start justify-between gap-3 mb-4">
+                      <div className="flex items-center gap-3">
                         {item.logo ? (
-                          <div className={`w-14 h-14 rounded-full border-2 border-[var(--color-border)] ${item.logo.includes('outskill') ? 'bg-[#071514] p-2' : 'bg-white p-1'
+                          <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-[var(--color-border)] ${item.logo.includes('outskill') ? 'bg-[#071514] p-2' : 'bg-white p-1'
                             } shadow-[3px_3px_0px_var(--color-border)] group-hover:scale-105 transition-all flex items-center justify-center shrink-0 overflow-hidden`}>
                             <img
                               src={item.logo}
@@ -74,9 +74,9 @@ export default function EducationCertification() {
                             />
                           </div>
                         ) : (
-                          <div className={`p-3.5 rounded-full border-2 border-[var(--color-border)] ${isEdu ? 'bg-[var(--color-card-secondary)] text-[var(--color-accent-sage)]' : 'bg-[var(--color-card-secondary)] text-[var(--color-accent-salmon)]'
+                          <div className={`p-3 sm:p-3.5 rounded-full border-2 border-[var(--color-border)] ${isEdu ? 'bg-[var(--color-card-secondary)] text-[var(--color-accent-sage)]' : 'bg-[var(--color-card-secondary)] text-[var(--color-accent-salmon)]'
                             } shadow-[3px_3px_0px_var(--color-border)] group-hover:rotate-6 transition-transform flex items-center justify-center shrink-0`}>
-                            {isEdu ? <GraduationCap className="w-6 h-6" /> : <Award className="w-6 h-6" />}
+                            {isEdu ? <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" /> : <Award className="w-5 h-5 sm:w-6 sm:h-6" />}
                           </div>
                         )}
                         <div>
@@ -90,7 +90,7 @@ export default function EducationCertification() {
                         </div>
                       </div>
 
-                      <span className="font-tech text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded bg-[var(--color-card-secondary)] border border-[var(--color-border)] text-[var(--color-text-muted)]">
+                      <span className="font-tech text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded bg-[var(--color-card-secondary)] border border-[var(--color-border)] text-[var(--color-text-muted)] shrink-0">
                         {item.type}
                       </span>
                     </div>

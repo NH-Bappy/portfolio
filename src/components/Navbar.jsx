@@ -36,18 +36,18 @@ export default function Navbar() {
         {/* Brand Tag */}
         <a
           href="#hero"
-          className="flex items-center gap-2 group cursor-pointer text-decoration-none"
+          className="flex items-center gap-2 group cursor-pointer text-decoration-none min-w-0"
         >
           <img
             src="/profile.png"
             alt={personalInfo.name}
-            className="w-9 h-9 rounded-full border-2 border-[var(--color-border)] object-cover shadow-[2px_2px_0px_var(--color-border)] group-hover:scale-105 transition-transform"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 border-[var(--color-border)] object-cover shadow-[2px_2px_0px_var(--color-border)] group-hover:scale-105 transition-transform shrink-0"
           />
-          <div className="flex flex-col">
-            <span className="font-display font-bold text-base tracking-wider uppercase leading-none text-[var(--color-text-main)]">
+          <div className="flex flex-col min-w-0">
+            <span className="font-display font-bold text-xs sm:text-base tracking-wider uppercase leading-none text-[var(--color-text-main)] truncate">
               {personalInfo.name}
             </span>
-            <span className="font-tech text-[10px] text-[var(--color-text-muted)] tracking-widest uppercase">
+            <span className="font-tech text-[9px] sm:text-[10px] text-[var(--color-text-muted)] tracking-widest uppercase">
               2026 Portfolio
             </span>
           </div>
@@ -67,7 +67,7 @@ export default function Navbar() {
         </nav>
 
         {/* Right CTA + Theme Toggle */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <ThemeToggle />
 
           <a
@@ -81,7 +81,7 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-md border-2 border-[var(--color-border)] bg-[var(--color-card)] text-[var(--color-text-main)] shadow-[2px_2px_0px_var(--color-border)]"
+            className="md:hidden p-2 rounded-md border-2 border-[var(--color-border)] bg-[var(--color-card)] text-[var(--color-text-main)] shadow-[2px_2px_0px_var(--color-border)] cursor-pointer"
             aria-label="Toggle mobile menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -91,7 +91,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[var(--color-card)] border-b-2 border-[var(--color-border)] px-6 py-6 shadow-xl animate-in slide-in-from-top-4 duration-200">
+        <div className="md:hidden bg-[var(--color-card)] border-b-2 border-[var(--color-border)] px-6 py-6 shadow-xl animate-in slide-in-from-top-4 duration-200 max-h-[calc(100vh-4.5rem)] overflow-y-auto no-scrollbar">
           <nav className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <a

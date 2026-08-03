@@ -106,6 +106,17 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+/* Hide scrollbar utility for horizontal scrollable filters */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* Custom scrollbar */

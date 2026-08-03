@@ -32,15 +32,15 @@ export default function Hero() {
           className="retro-card p-6 sm:p-10 mb-8 relative overflow-hidden bg-[var(--color-card)]"
         >
           {/* Top Vintage Metadata Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b-2 border-[var(--color-border)] font-tech text-xs font-bold tracking-widest text-[var(--color-text-muted)] uppercase">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pb-4 border-b-2 border-[var(--color-border)] font-tech text-[11px] sm:text-xs font-bold tracking-widest text-[var(--color-text-muted)] uppercase text-center sm:text-left">
             <a
               href={`tel:${personalInfo.phone}`}
               className="flex items-center gap-1.5 hover:text-[var(--color-accent-crimson)] transition-colors cursor-pointer text-decoration-none"
             >
-              <Phone className="w-3.5 h-3.5 text-[var(--color-accent-salmon)]" />
+              <Phone className="w-3.5 h-3.5 text-[var(--color-accent-salmon)] shrink-0" />
               <span>CONTACT: {personalInfo.phone}</span>
             </a>
-            <span className="flex items-center gap-1.5 text-xl text-[var(--color-accent-crimson)]">
+            <span className="flex items-center gap-1.5 text-xs sm:text-sm md:text-base text-[var(--color-accent-crimson)]">
               <span className="inline-block w-2 h-2 rounded-full bg-[var(--color-accent-crimson)] animate-ping" />
               {personalInfo.status}
             </span>
@@ -51,36 +51,36 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="px-4 py-1.5 bg-[var(--color-accent-crimson)] text-white border-2 border-[var(--color-border)] rounded-full font-tech font-bold text-xs uppercase tracking-wider shadow-[2px_2px_0px_var(--color-border)] hover:bg-black hover:translate-y-[-1px] transition-all flex items-center gap-1.5 cursor-pointer text-decoration-none"
             >
-              <Download className="w-3.5 h-3.5" />
+              <Download className="w-3.5 h-3.5 shrink-0" />
               <span>Download Resume</span>
             </a>
           </div>
 
           {/* Huge Poster Title */}
-          <div className="py-8 sm:py-12 text-center relative">
+          <div className="py-6 sm:py-12 text-center relative">
             {/* Flourish Stars */}
-            <Sparkles className="absolute top-2 left-4 sm:left-12 w-8 h-8 text-[var(--color-accent-yellow)] animate-star-pulse" />
-            <Sparkles className="absolute bottom-2 right-4 sm:right-12 w-8 h-8 text-[var(--color-accent-salmon)] animate-star-pulse" />
+            <Sparkles className="hidden sm:block absolute top-2 left-4 sm:left-12 w-6 h-6 sm:w-8 sm:h-8 text-[var(--color-accent-yellow)] animate-star-pulse" />
+            <Sparkles className="hidden sm:block absolute bottom-2 right-4 sm:right-12 w-6 h-6 sm:w-8 sm:h-8 text-[var(--color-accent-salmon)] animate-star-pulse" />
 
-            <h2 className="font-tech text-xs sm:text-sm font-bold tracking-[0.3em] uppercase text-[var(--color-accent-sage)] mb-2">
+            <h2 className="font-tech text-xs sm:text-sm font-bold tracking-[0.2em] sm:tracking-[0.3em] uppercase text-[var(--color-accent-sage)] mb-2">
               ✦ Full-Stack Web Developer ✦
             </h2>
 
-            <h1 className="font-display font-extrabold text-5xl sm:text-7xl lg:text-4xl uppercase tracking-tighter text-[var(--color-text-main)] leading-none drop-shadow-sm">
+            <h1 className="font-display font-extrabold text-3xl sm:text-6xl md:text-7xl lg:text-8xl uppercase tracking-tighter text-[var(--color-text-main)] leading-none drop-shadow-sm">
               NAIMUL HASAN
             </h1>
 
-            <p className="mt-4 max-w-2xl mx-auto font-tech text-sm sm:text-base text-[var(--color-text-muted)] font-medium">
+            <p className="mt-4 max-w-2xl mx-auto font-tech text-xs sm:text-base text-[var(--color-text-muted)] font-medium px-2">
               {personalInfo.tagline}
             </p>
           </div>
 
           {/* Category Pill Bar (From Image 1 middle navigation) */}
-          <div className="pt-4 border-t-2 border-[var(--color-border)] flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+          <div className="pt-4 border-t-2 border-[var(--color-border)] flex items-center overflow-x-auto no-scrollbar gap-2 sm:gap-3 justify-start sm:justify-center pb-1 sm:pb-0">
             {posterCategories.map((cat, i) => (
               <span
                 key={i}
-                className="badge-pill hover:bg-[var(--color-accent-crimson)] hover:text-white transition-all cursor-pointer"
+                className="badge-pill hover:bg-[var(--color-accent-crimson)] hover:text-white transition-all cursor-pointer text-[10px] sm:text-xs"
               >
                 ✦ {cat}
               </span>
@@ -103,17 +103,17 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-5 flex flex-col"
           >
-            <div className="retro-card p-6 flex-1 flex flex-col justify-between relative group">
+            <div className="retro-card p-5 sm:p-6 flex-1 flex flex-col justify-between relative group">
 
               {/* Badge Overlay */}
               <div className="absolute top-4 left-4 z-10">
-                <span className="badge-pill bg-[var(--color-accent-salmon)] text-white border-0 shadow-sm">
+                <span className="badge-pill bg-[var(--color-accent-salmon)] text-white border-0 shadow-sm text-[10px]">
                   ★ DA JUNIOR / DEV
                 </span>
               </div>
 
               {/* Illustration Avatar Frame */}
-              <div className="relative rounded-full overflow-hidden border-4 border-[var(--color-border)] bg-[var(--color-card-secondary)] mb-6 aspect-square flex items-center justify-center shadow-[4px_4px_0px_var(--color-border)]">
+              <div className="relative rounded-full overflow-hidden border-4 border-[var(--color-border)] bg-[var(--color-card-secondary)] my-6 w-full max-w-[220px] sm:max-w-[260px] aspect-square mx-auto flex items-center justify-center shadow-[4px_4px_0px_var(--color-border)]">
                 {/* Profile Photo - Retro Poster Aesthetic */}
                 <img
                   src="/profile.png"
@@ -145,7 +145,7 @@ export default function Hero() {
                   <div className="w-7 h-7 rounded bg-[var(--color-accent-crimson)] text-white flex items-center justify-center font-bold shadow-sm shrink-0">
                     <Brain className="w-4 h-4 text-white animate-pulse" />
                   </div>
-                  <span className="font-tech font-extrabold text-[11px] uppercase tracking-widest text-[var(--color-accent-crimson)]">
+                  <span className="font-tech font-extrabold text-[10px] sm:text-[11px] uppercase tracking-widest text-[var(--color-accent-crimson)]">
                     ✦ FUTURE GOAL // APPLIED AI ENGINEER
                   </span>
                 </div>
@@ -168,55 +168,55 @@ export default function Hero() {
               <div>
                 {/* Section Header */}
                 <div className="flex items-center gap-2 mb-4">
-                  <Sparkles className="w-6 h-6 text-[var(--color-accent-yellow)]" />
+                  <Sparkles className="w-6 h-6 text-[var(--color-accent-yellow)] shrink-0" />
                   <h3 className="font-display font-bold text-3xl sm:text-5xl uppercase tracking-tight text-[var(--color-text-main)]">
                     HELLO !
                   </h3>
                 </div>
 
-                <h4 className="font-tech font-bold text-lg sm:text-xl text-[var(--color-accent-crimson)] mb-6">
+                <h4 className="font-tech font-bold text-base sm:text-xl text-[var(--color-accent-crimson)] mb-6">
                   I'm {personalInfo.name} &amp; I'm a Full-Stack Web Developer.
                 </h4>
 
-                <p className="font-body text-sm sm:text-base leading-relaxed text-[var(--color-text-main)] mb-6">
+                <p className="font-body text-xs sm:text-base leading-relaxed text-[var(--color-text-main)] mb-6">
                   {personalInfo.bioShort}
                 </p>
 
-                <p className="font-body text-sm sm:text-base leading-relaxed text-[var(--color-text-muted)] mb-6">
+                <p className="font-body text-xs sm:text-base leading-relaxed text-[var(--color-text-muted)] mb-6">
                   {personalInfo.bioLong}
                 </p>
 
                 {personalInfo.bioLong2nd && (
-                  <p className="font-body text-sm sm:text-base leading-relaxed text-[var(--color-text-muted)] mb-8">
+                  <p className="font-body text-xs sm:text-base leading-relaxed text-[var(--color-text-muted)] mb-8">
                     {personalInfo.bioLong2nd}
                   </p>
                 )}
               </div>
 
               {/* CTA Action Buttons */}
-              <div className="pt-6 border-t-2 border-[var(--color-border)] flex flex-wrap items-center gap-4">
+              <div className="pt-6 border-t-2 border-[var(--color-border)] flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                 <a
                   href="#projects"
-                  className="px-6 py-3 bg-[var(--color-accent-crimson)] text-white font-tech font-bold text-xs sm:text-sm uppercase tracking-wider rounded-md border-2 border-[var(--color-border)] shadow-[4px_4px_0px_var(--color-border)] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_var(--color-border)] transition-all flex items-center gap-2"
+                  className="px-6 py-3 bg-[var(--color-accent-crimson)] text-white font-tech font-bold text-xs sm:text-sm uppercase tracking-wider rounded-md border-2 border-[var(--color-border)] shadow-[4px_4px_0px_var(--color-border)] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_var(--color-border)] transition-all flex items-center justify-center gap-2 text-center"
                 >
-                  <Compass className="w-4 h-4" />
+                  <Compass className="w-4 h-4 shrink-0" />
                   <span>Explore Projects</span>
                 </a>
 
                 <a
                   href="#contact"
-                  className="px-6 py-3 bg-[var(--color-card-secondary)] text-[var(--color-text-main)] font-tech font-bold text-xs sm:text-sm uppercase tracking-wider rounded-md border-2 border-[var(--color-border)] shadow-[4px_4px_0px_var(--color-border)] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_var(--color-border)] transition-all flex items-center gap-2"
+                  className="px-6 py-3 bg-[var(--color-card-secondary)] text-[var(--color-text-main)] font-tech font-bold text-xs sm:text-sm uppercase tracking-wider rounded-md border-2 border-[var(--color-border)] shadow-[4px_4px_0px_var(--color-border)] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_var(--color-border)] transition-all flex items-center justify-center gap-2 text-center"
                 >
-                  <Send className="w-4 h-4 text-[var(--color-accent-salmon)]" />
+                  <Send className="w-4 h-4 text-[var(--color-accent-salmon)] shrink-0" />
                   <span>Get in Touch</span>
                 </a>
 
                 <a
                   href="#about"
-                  className="px-4 py-3 text-[var(--color-text-muted)] hover:text-[var(--color-accent-crimson)] font-tech font-bold text-xs uppercase tracking-wider flex items-center gap-1 transition-colors ml-auto"
+                  className="px-4 py-2.5 text-[var(--color-text-muted)] hover:text-[var(--color-accent-crimson)] font-tech font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-colors sm:ml-auto"
                 >
                   <span>Learn More</span>
-                  <ArrowDown className="w-4 h-4" />
+                  <ArrowDown className="w-4 h-4 shrink-0" />
                 </a>
               </div>
 

@@ -40,12 +40,12 @@ export default function Skills() {
           </div>
 
           {/* Filter Buttons */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex items-center overflow-x-auto no-scrollbar gap-2 pb-1 md:pb-0">
             {skillCategories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-4 py-2 rounded-full border-2 border-[var(--color-border)] font-tech text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${activeCategory === cat.id
+                className={`px-4 py-2 rounded-full border-2 border-[var(--color-border)] font-tech text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap shrink-0 ${activeCategory === cat.id
                     ? 'bg-[var(--color-accent-crimson)] text-white shadow-[3px_3px_0px_var(--color-border)]'
                     : 'bg-[var(--color-card)] text-[var(--color-text-main)] hover:bg-[var(--color-pill-bg)]'
                   }`}
@@ -67,20 +67,20 @@ export default function Skills() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.96, y: 20 }}
                 transition={{ duration: 0.3 }}
-                className="retro-card p-6 flex flex-col justify-between relative group hover:border-[var(--color-accent-crimson)] transition-colors"
+                className="retro-card p-5 sm:p-6 flex flex-col justify-between relative group hover:border-[var(--color-accent-crimson)] transition-colors"
               >
                 <div>
                   {/* Box Header Bar */}
                   <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="p-3 rounded-lg border-2 border-[var(--color-border)] bg-[var(--color-card-secondary)] shadow-[2px_2px_0px_var(--color-border)] group-hover:rotate-3 transition-transform">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="p-3 rounded-lg border-2 border-[var(--color-border)] bg-[var(--color-card-secondary)] shadow-[2px_2px_0px_var(--color-border)] group-hover:rotate-3 transition-transform shrink-0">
                         {getSectionIcon(section.icon)}
                       </div>
-                      <div>
+                      <div className="min-w-0">
                         <span className={`badge-pill text-[10px] font-bold tracking-wider mb-1 ${section.badgeColor}`}>
                           {section.title}
                         </span>
-                        <h3 className="font-display font-extrabold text-xl text-[var(--color-text-main)]">
+                        <h3 className="font-display font-extrabold text-lg sm:text-xl text-[var(--color-text-main)] truncate">
                           {section.subtitle}
                         </h3>
                       </div>
@@ -100,15 +100,15 @@ export default function Skills() {
                     {section.skills.map((skill) => (
                       <div
                         key={skill.name}
-                        className="flex items-center justify-between p-2.5 rounded-md border-2 border-[var(--color-border)] bg-[var(--color-card-secondary)]/60 hover:bg-[var(--color-pill-bg)] transition-colors"
+                        className="flex items-center justify-between p-2.5 rounded-md border-2 border-[var(--color-border)] bg-[var(--color-card-secondary)]/60 hover:bg-[var(--color-pill-bg)] transition-colors gap-2"
                       >
-                        <div className="flex items-center gap-2.5">
+                        <div className="flex items-center gap-2.5 min-w-0 flex-1">
                           <CheckCircle2 className="w-4 h-4 text-[var(--color-accent-crimson)] shrink-0" />
-                          <span className="font-display font-bold text-sm text-[var(--color-text-main)]">
+                          <span className="font-display font-bold text-xs sm:text-sm text-[var(--color-text-main)] truncate">
                             {skill.name}
                           </span>
                         </div>
-                        <span className="font-tech text-[10px] uppercase font-semibold text-[var(--color-text-muted)] px-2 py-0.5 rounded bg-[var(--color-card)] border border-[var(--color-border-subtle)]">
+                        <span className="font-tech text-[10px] uppercase font-semibold text-[var(--color-text-muted)] px-2 py-0.5 rounded bg-[var(--color-card)] border border-[var(--color-border-subtle)] shrink-0">
                           {skill.tag}
                         </span>
                       </div>
