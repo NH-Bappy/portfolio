@@ -9,15 +9,20 @@ export default function Projects({ onSelectProject }) {
   const [modalProject, setModalProject] = useState(null);
 
   const categories = [
-    { id: 'all', name: 'All Works' },
-    { id: 'web', name: 'Web Applications' },
-    { id: 'motion', name: 'Game & Visuals' },
-    { id: '3d', name: '3D & Interactive' }
+    { id: 'all', name: 'All Projects' },
+    { id: 'frontend', name: 'Front-End' },
+    { id: 'backend', name: 'Back-End' },
+    { id: 'fullstack', name: 'Full-Stack' }
   ];
 
   const filteredProjects = filter === 'all'
     ? projects
-    : projects.filter(p => p.category === filter);
+    : projects.filter(p => {
+        if (p.category === filter) return true;
+        if (filter === 'backend' && p.category === 'fullstack') return true;
+        if (filter === 'frontend' && p.category === 'fullstack') return true;
+        return false;
+      });
 
   const handleOpenProject = (project) => {
     if (onSelectProject) {
