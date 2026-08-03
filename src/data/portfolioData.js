@@ -365,45 +365,50 @@ export const projects = [
   },
   {
     id: "proj-3",
-    title: "Vogue Vintage - Editorial E-Commerce",
-    subtitle: "Retro Newspaper Style E-Commerce Platform",
+    title: "Typing Speed Test Game",
+    subtitle: "Interactive Modern Typing Speed & Accuracy Tester",
     category: "web",
-    categoryLabel: "Full-Stack Web App",
-    year: "2025",
-    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=1000&auto=format&fit=crop",
+    categoryLabel: "Front-End Web App",
+    year: "2026",
+    image: "/typing-game.png",
     galleryImages: [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=1000&auto=format&fit=crop"
+      "/typing-game.png"
     ],
     gradient: "from-amber-900 via-stone-900 to-orange-950",
-    tags: ["React", "Tailwind CSS", "Framer Motion", "TanStack"],
-    description: "An editorial e-commerce platform styled like a 1970s print magazine, featuring seamless state management, interactive product drag showcase, and retro sound effects.",
-    aboutDetail: "Vogue Vintage blends nostalgic retro print typography with cutting-edge front-end engineering. It offers custom product filtering, drag-and-drop catalog views, instant search, and interactive article-style product detail pages.",
+    tags: ["JavaScript ES6+", "HTML5", "CSS3", "DOM Algorithms", "WPM Calculation", "Google Fonts"],
+    description: "An interactive, modern, and minimalist web-based typing speed test app (inspired by Monkeytype) built using Vanilla HTML5, CSS3, and JavaScript.",
+    aboutDetail: "Typing Speed Test Game is a sleek, distraction-free typing productivity web application inspired by Monkeytype. Built with pure Vanilla JavaScript (ES6+), HTML5, and CSS3, it calculates real-time typing speed (WPM) over a 30-second test window. It features live character highlighting, dynamic DOM-based cursor tracking, vertical line auto-scrolling, spacebar navigation, full backspace error correction, and focus protection.",
     whatIUsed: [
       {
-        category: "Front-End Architecture",
-        tools: ["React", "JavaScript ES6", "TanStack Query"],
-        description: "Optimized state management, instant catalog filtering, and API data fetching."
+        category: "Structure & Accessibility",
+        tools: ["HTML5", "SVG Icons", "Tabindex Focus"],
+        description: "Semantic project structure, custom focus management with tabindex='0' for keyboard events, and SVG elements."
       },
       {
-        category: "Styling & Motion",
-        tools: ["Tailwind CSS", "Framer Motion"],
-        description: "Editorial grid layouts, newspaper column design, and paper-fold transitions."
+        category: "Styling & Animations",
+        tools: ["CSS3", "CSS Variables", "Blur Filters", "Roboto Mono Font"],
+        description: "Modern dark mode theme, CSS variable design tokens, smooth caret cursor transitions, and focus blur overlay effects."
+      },
+      {
+        category: "JavaScript Engine",
+        tools: ["Vanilla JS (ES6+)", "DOM Mutation Algorithms", "BoundingClientRect API"],
+        description: "Real-time keyup typing algorithms, accurate WPM calculation, backspace handling, live timer countdown, and fluid caret positioning."
       }
     ],
     impact: [
-      { metric: "10k+", label: "Monthly Catalog Views" },
-      { metric: "< 1s", label: "Instant Product Search Filtering" },
-      { metric: "99.9%", label: "Uptime & Fast CDN Delivery" }
+      { metric: "30-Second", label: "Automated Countdown Timer" },
+      { metric: "Real-Time", label: "DOM Caret Smooth Motion & Line Auto-Scroll" },
+      { metric: "Accurate", label: "Dynamic WPM & Accuracy Calculation Engine" },
+      { metric: "Focus Lock", label: "CSS Blur Focus Protection System" }
     ],
     highlights: [
-      "Custom page turn and paper crinkle Framer Motion physics",
-      "TanStack table & query integrations for instant stock sorting",
-      "Accessible dark/light newspaper ink mode switcher"
+      "30-Second Countdown: Automated game timer triggered instantly on first keystroke.",
+      "Accurate WPM Calculation: Only fully and correctly typed words contribute to final performance score.",
+      "Visual Feedback & Focus Lock: Real-time letter colors (White = Correct, Red = Incorrect) and automatic blur overlay when unfocused.",
+      "Smooth Caret & Scroll: Fluid cursor movement using getBoundingClientRect() and automatic vertical line scrolling."
     ],
-    liveUrl: "https://example.com/vogue",
-    githubUrl: "https://github.com/example/vogue"
+    liveUrl: "https://typing-game-eosin-theta.vercel.app/",
+    githubUrl: "https://github.com/NH-Bappy/typing-game"
   },
   {
     id: "proj-4",
