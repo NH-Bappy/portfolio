@@ -17,12 +17,7 @@ export default function Projects({ onSelectProject }) {
 
   const filteredProjects = filter === 'all'
     ? projects
-    : projects.filter(p => {
-        if (p.category === filter) return true;
-        if (filter === 'backend' && p.category === 'fullstack') return true;
-        if (filter === 'frontend' && p.category === 'fullstack') return true;
-        return false;
-      });
+    : projects.filter(p => p.category === filter);
 
   const handleOpenProject = (project) => {
     if (onSelectProject) {

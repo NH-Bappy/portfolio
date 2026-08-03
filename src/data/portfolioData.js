@@ -412,44 +412,44 @@ export const projects = [
   },
   {
     id: "proj-4",
-    title: "Psyche Motion - 3D Character Showcase",
-    subtitle: "Interactive WebGL & Model Viewer",
-    category: "frontend",
-    categoryLabel: "Front-End 3D App",
-    year: "2024",
-    image: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1000&auto=format&fit=crop",
+    title: "E-Commerce & Inventory REST API Backend",
+    subtitle: "Production-Ready E-Commerce & Real-Time Backend API",
+    category: "backend",
+    categoryLabel: "Back-End REST API",
+    year: "2026",
+    image: "/rfid-console.png",
     galleryImages: [
-      "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop"
+      "/rfid-console.png"
     ],
     gradient: "from-teal-950 via-cyan-950 to-indigo-950",
-    tags: ["Three.js", "Blender", "GSAP", "React"],
-    description: "Interactive web showcase featuring 3D character turntables with dynamic lighting controls, post-processing filters, and pose animations.",
-    aboutDetail: "Psyche Motion is an interactive 3D web model viewer designed for artists and game developers. Users can rotate high-poly 3D models in real-time, adjust studio lighting conditions, toggle custom PBR shaders, and preview custom motion animations.",
+    tags: ["Node.js", "Express.js v5", "MongoDB", "Mongoose v8", "Socket.io v4", "JWT & Bcrypt", "SSLCommerz", "Cloudinary", "Multer"],
+    description: "A production-ready, feature-rich RESTful API and real-time backend server managing end-to-end e-commerce operations, payments, logistics, and authentication.",
+    aboutDetail: "Engineered a production-ready Express.js (v5) REST API backend matrix with cookie parsing, CORS permissions, AuthGuard JWT verification, and centralized error handling. Features Mongoose schemas for Users, Products, Variants, Discounts, Cart, Courier logistics, SSLCommerz payment gateway (cards, bKash, Nagad) with IPN callbacks, BWIP-JS invoice barcodes, and Socket.io live notifications.",
     whatIUsed: [
       {
-        category: "3D Engine & Shaders",
-        tools: ["Three.js", "WebGL", "GLSL Shaders"],
-        description: "Real-time PBR rendering, dynamic shadow mapping, and post-processing bloom."
+        category: "Backend Framework & Architecture",
+        tools: ["Node.js", "Express.js v5", "JWT & Bcrypt", "Joi & Axios"],
+        description: "RESTful API matrix, AuthGuard middleware, HTTP-only cookie JWT auth, and schema validation."
       },
       {
-        category: "Modeling & Rigging",
-        tools: ["Blender", "ZBrush", "GLTF Pipeline"],
-        description: "High-to-low poly baking, character rigging, and asset size compression."
+        category: "Database & Real-Time Comms",
+        tools: ["MongoDB", "Mongoose v8", "Socket.io v4", "Cloudinary"],
+        description: "Relational Mongoose models, private room WebSocket live notifications, and Cloudinary media uploading."
       }
     ],
     impact: [
-      { metric: "60 FPS", label: "High-Poly Real-Time WebGL Rendering" },
-      { metric: "75%", label: "Asset Compression Ratio" },
-      { metric: "WebGL 2.0", label: "Cross-Platform GPU Acceleration" }
+      { metric: "SSLCommerz", label: "Integrated Payment Gateway & Callback IPN" },
+      { metric: "Socket.io v4", label: "Real-Time Targeted Private Room Notifications" },
+      { metric: "Express v5", label: "High-Performance RESTful Routing Matrix" },
+      { metric: "JWT + Bcrypt", label: "HTTP-Only Secure Authentication & AuthGuard" }
     ],
     highlights: [
-      "Custom PBR shaders with real-time bloom and chromatic aberration",
-      "GSAP camera orbit controls with smooth damping",
-      "Optimized GLTF asset loading for ultra-fast load times"
+      "Core Architecture: Engineered Express.js (v5) REST API matrix with AuthGuard JWT verification and centralized error handling.",
+      "Authentication & Security: Access & Refresh JWTs in HTTP-only cookies, password hashing with Bcrypt, and Nodemailer OTP verification.",
+      "Payments & Invoicing: Integrated SSLCommerz payment gateway with IPN callbacks and BWIP-JS barcode invoice generation.",
+      "Real-Time WebSockets: Deployed Socket.io (v4) for targeted private room live notifications and Multer + Cloudinary image management."
     ],
-    liveUrl: "https://example.com/psyche",
-    githubUrl: "https://github.com/example/psyche"
+    liveUrl: "https://github.com/NH-Bappy",
+    githubUrl: "https://github.com/NH-Bappy"
   }
 ];
