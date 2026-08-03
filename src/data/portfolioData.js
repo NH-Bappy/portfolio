@@ -63,10 +63,32 @@ export const experiences = [
     ]
   },
   {
-    period: "January 2023 - August 2023",
-    role: "Motion Designer & Front-End Developer",
-    company: "EXPERIENCES POSTERS / LACOSTE S.A.",
-    description: "Conceived dynamic vector animations, custom UI micro-interactions, canvas shaders, and editorial promo layouts for global product launches."
+    period: "2025 - 2026",
+    role: "E-Commerce & Inventory Management REST API Backend",
+    company: "Full-Stack Node.js, Express (v5), MongoDB & Socket.io Backend",
+    description: "A production-ready, feature-rich RESTful API and real-time backend server managing end-to-end e-commerce operations including user authentication, product catalog, variants, discounts, shopping cart, orders, SSLCommerz payment integration, logistics, invoice generation, and real-time notifications.",
+    points: [
+      "Core Architecture & API Routing: Engineered Express.js (v5) REST API (/api/v1) matrix with cookie parsing, CORS permissions, AuthGuard JWT verification, and centralized error handling.",
+      "Authentication & Security: Built secure auth workflows featuring Access & Refresh JWTs in HTTP-only cookies, password hashing with Bcrypt, and Nodemailer OTP email verification.",
+      "Catalog, Cart & Logistics: Designed Mongoose (v8) schemas for Users, Products, Variants, Categories, Discounts, Coupons, Cart management, Courier logistics, and Orders with status tracking.",
+      "Payments & Invoicing: Integrated SSLCommerz payment gateway (cards, bKash, Nagad) with IPN callbacks, alongside BWIP-JS barcode and QRCode generator for digital invoice tracking.",
+      "Real-Time WebSockets & Media: Deployed Socket.io (v4) for targeted private room live notifications and Multer + Cloudinary media integration for optimized image management."
+    ],
+    techStack: [
+      "Node.js",
+      "Express.js v5",
+      "MongoDB",
+      "Mongoose v8",
+      "Socket.io v4",
+      "JWT & Bcrypt",
+      "SSLCommerz",
+      "Cloudinary",
+      "Multer",
+      "Nodemailer",
+      "BWIP-JS",
+      "QRCode",
+      "Joi & Axios"
+    ]
   },
   {
     period: "September 2021 - November 2022",

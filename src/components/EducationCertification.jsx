@@ -9,23 +9,17 @@ export default function EducationCertification() {
   const filteredItems = activeFilter === 'all'
     ? education
     : activeFilter === 'education'
-    ? education.filter(item => item.type === 'Education')
-    : education.filter(item => item.type === 'Certification');
+      ? education.filter(item => item.type === 'Education')
+      : education.filter(item => item.type === 'Certification');
 
   return (
     <section id="education" className="py-16 sm:py-24 relative bg-[var(--color-bg)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 border-b-2 border-[var(--color-border)] pb-6">
           <div>
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-xl text-[var(--color-accent-crimson)]">✦</span>
-              <span className="font-tech text-xs font-bold uppercase tracking-widest text-[var(--color-accent-crimson)]">
-                ACADEMICS &amp; CERTIFICATES
-              </span>
-            </div>
-            <h2 className="font-display font-extrabold text-3xl sm:text-5xl uppercase text-[var(--color-text-main)]">
+            <h2 className="font-display font-extrabold text-xl sm:text-4xl uppercase text-[var(--color-text-main)]">
               EDUCATION &amp; CERTIFICATION
             </h2>
           </div>
@@ -40,11 +34,10 @@ export default function EducationCertification() {
               <button
                 key={tab.id}
                 onClick={() => setActiveFilter(tab.id)}
-                className={`px-4 py-2 rounded-full border-2 border-[var(--color-border)] font-tech text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
-                  activeFilter === tab.id
-                    ? 'bg-[var(--color-accent-crimson)] text-white shadow-[3px_3px_0px_var(--color-border)]'
-                    : 'bg-[var(--color-card)] text-[var(--color-text-main)] hover:bg-[var(--color-pill-bg)]'
-                }`}
+                className={`px-4 py-2 rounded-full border-2 border-[var(--color-border)] font-tech text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${activeFilter === tab.id
+                  ? 'bg-[var(--color-accent-crimson)] text-white shadow-[3px_3px_0px_var(--color-border)]'
+                  : 'bg-[var(--color-card)] text-[var(--color-text-main)] hover:bg-[var(--color-pill-bg)]'
+                  }`}
               >
                 ✦ {tab.label}
               </button>
@@ -72,9 +65,8 @@ export default function EducationCertification() {
                     <div className="flex items-start justify-between gap-4 mb-4">
                       <div className="flex items-center gap-3.5">
                         {item.logo ? (
-                          <div className={`w-14 h-14 rounded-full border-2 border-[var(--color-border)] ${
-                            item.logo.includes('outskill') ? 'bg-[#071514] p-2' : 'bg-white p-1'
-                          } shadow-[3px_3px_0px_var(--color-border)] group-hover:scale-105 transition-all flex items-center justify-center shrink-0 overflow-hidden`}>
+                          <div className={`w-14 h-14 rounded-full border-2 border-[var(--color-border)] ${item.logo.includes('outskill') ? 'bg-[#071514] p-2' : 'bg-white p-1'
+                            } shadow-[3px_3px_0px_var(--color-border)] group-hover:scale-105 transition-all flex items-center justify-center shrink-0 overflow-hidden`}>
                             <img
                               src={item.logo}
                               alt={item.institution || item.degree}
@@ -82,16 +74,14 @@ export default function EducationCertification() {
                             />
                           </div>
                         ) : (
-                          <div className={`p-3.5 rounded-full border-2 border-[var(--color-border)] ${
-                            isEdu ? 'bg-[var(--color-card-secondary)] text-[var(--color-accent-sage)]' : 'bg-[var(--color-card-secondary)] text-[var(--color-accent-salmon)]'
-                          } shadow-[3px_3px_0px_var(--color-border)] group-hover:rotate-6 transition-transform flex items-center justify-center shrink-0`}>
+                          <div className={`p-3.5 rounded-full border-2 border-[var(--color-border)] ${isEdu ? 'bg-[var(--color-card-secondary)] text-[var(--color-accent-sage)]' : 'bg-[var(--color-card-secondary)] text-[var(--color-accent-salmon)]'
+                            } shadow-[3px_3px_0px_var(--color-border)] group-hover:rotate-6 transition-transform flex items-center justify-center shrink-0`}>
                             {isEdu ? <GraduationCap className="w-6 h-6" /> : <Award className="w-6 h-6" />}
                           </div>
                         )}
                         <div>
-                          <span className={`badge-pill text-[10px] font-bold tracking-wider uppercase inline-block mb-1 ${
-                            isEdu ? 'bg-[var(--color-accent-sage)] text-white' : 'bg-[var(--color-accent-crimson)] text-white'
-                          }`}>
+                          <span className={`badge-pill text-[10px] font-bold tracking-wider uppercase inline-block mb-1 ${isEdu ? 'bg-[var(--color-accent-sage)] text-white' : 'bg-[var(--color-accent-crimson)] text-white'
+                            }`}>
                             {item.badge || item.type}
                           </span>
                           <span className="font-tech text-xs font-bold text-[var(--color-accent-salmon)] block">
@@ -109,7 +99,7 @@ export default function EducationCertification() {
                     <h3 className="font-display font-extrabold text-xl text-[var(--color-text-main)] mb-1 group-hover:text-[var(--color-accent-crimson)] transition-colors">
                       {item.degree}
                     </h3>
-                    
+
                     <div className="flex flex-wrap items-center gap-3 mb-4">
                       {item.institution && (
                         <div className="flex items-center gap-1.5 font-tech text-xs font-semibold text-[var(--color-accent-sage)]">

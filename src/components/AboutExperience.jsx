@@ -7,11 +7,11 @@ export default function AboutExperience() {
   return (
     <section id="about" className="py-16 sm:py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Title */}
         <div className="flex items-center gap-3 mb-12 border-b-2 border-[var(--color-border)] pb-4">
           <span className="text-2xl text-[var(--color-accent-crimson)]">✦</span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl uppercase text-[var(--color-text-main)]">
+          <h2 className="font-display font-extrabold text-xl sm:text-4xl uppercase text-[var(--color-text-main)]">
             WORK EXPERIENCE
           </h2>
           <span className="font-tech text-xs uppercase font-bold text-[var(--color-text-muted)] tracking-widest ml-auto hidden sm:inline">
@@ -42,7 +42,7 @@ export default function AboutExperience() {
                 >
                   {/* Timeline Dot */}
                   <div className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-[var(--color-accent-crimson)] border border-[var(--color-card)] group-hover:scale-125 transition-transform" />
-                  
+
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-1">
                     <h4 className="font-display font-extrabold text-lg sm:text-2xl text-[var(--color-text-main)]">
                       {exp.role}
@@ -55,7 +55,7 @@ export default function AboutExperience() {
                   <span className="font-tech text-xs sm:text-sm font-semibold text-[var(--color-accent-sage)] block mb-3">
                     {exp.company}
                   </span>
-                  
+
                   {exp.description && (
                     <p className="font-body text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed max-w-4xl mb-4">
                       {exp.description}

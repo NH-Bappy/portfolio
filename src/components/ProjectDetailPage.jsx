@@ -88,7 +88,7 @@ export default function ProjectDetailPage({ project, onBack, onSelectProject }) 
             </span>
           </div>
 
-          <h1 className="font-display font-extrabold text-4xl sm:text-6xl uppercase tracking-tight text-[var(--color-text-main)] leading-none">
+          <h1 className="font-display font-extrabold text-xl sm:text-3xl uppercase tracking-tight text-[var(--color-text-main)] leading-none">
             {project.title}
           </h1>
 
@@ -115,22 +115,20 @@ export default function ProjectDetailPage({ project, onBack, onSelectProject }) 
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setMediaTab('video')}
-                className={`px-3.5 py-1 rounded-full border-2 border-[var(--color-border)] font-tech text-xs font-bold uppercase transition-all cursor-pointer flex items-center gap-1.5 ${
-                  mediaTab === 'video'
-                    ? 'bg-[var(--color-accent-salmon)] text-white shadow-[2px_2px_0px_var(--color-border)]'
-                    : 'bg-[var(--color-card-secondary)] text-[var(--color-text-main)] hover:bg-[var(--color-pill-bg)]'
-                }`}
+                className={`px-3.5 py-1 rounded-full border-2 border-[var(--color-border)] font-tech text-xs font-bold uppercase transition-all cursor-pointer flex items-center gap-1.5 ${mediaTab === 'video'
+                  ? 'bg-[var(--color-accent-salmon)] text-white shadow-[2px_2px_0px_var(--color-border)]'
+                  : 'bg-[var(--color-card-secondary)] text-[var(--color-text-main)] hover:bg-[var(--color-pill-bg)]'
+                  }`}
               >
                 <Play className="w-3 h-3" />
                 <span>Video Demo</span>
               </button>
               <button
                 onClick={() => setMediaTab('gallery')}
-                className={`px-3.5 py-1 rounded-full border-2 border-[var(--color-border)] font-tech text-xs font-bold uppercase transition-all cursor-pointer flex items-center gap-1.5 ${
-                  mediaTab === 'gallery'
-                    ? 'bg-[var(--color-accent-salmon)] text-white shadow-[2px_2px_0px_var(--color-border)]'
-                    : 'bg-[var(--color-card-secondary)] text-[var(--color-text-main)] hover:bg-[var(--color-pill-bg)]'
-                }`}
+                className={`px-3.5 py-1 rounded-full border-2 border-[var(--color-border)] font-tech text-xs font-bold uppercase transition-all cursor-pointer flex items-center gap-1.5 ${mediaTab === 'gallery'
+                  ? 'bg-[var(--color-accent-salmon)] text-white shadow-[2px_2px_0px_var(--color-border)]'
+                  : 'bg-[var(--color-card-secondary)] text-[var(--color-text-main)] hover:bg-[var(--color-pill-bg)]'
+                  }`}
               >
                 <ImageIcon className="w-3 h-3" />
                 <span>Screenshots Gallery ({project.galleryImages?.length || 1})</span>
@@ -194,11 +192,10 @@ export default function ProjectDetailPage({ project, onBack, onSelectProject }) 
                   <button
                     key={idx}
                     onClick={() => setSelectedImage(imgUrl)}
-                    className={`relative aspect-video rounded-md overflow-hidden border-2 transition-all cursor-pointer ${
-                      selectedImage === imgUrl
-                        ? 'border-[var(--color-accent-salmon)] scale-105 shadow-[2px_2px_0px_var(--color-border)]'
-                        : 'border-[var(--color-border)] opacity-60 hover:opacity-100'
-                    }`}
+                    className={`relative aspect-video rounded-md overflow-hidden border-2 transition-all cursor-pointer ${selectedImage === imgUrl
+                      ? 'border-[var(--color-accent-salmon)] scale-105 shadow-[2px_2px_0px_var(--color-border)]'
+                      : 'border-[var(--color-border)] opacity-60 hover:opacity-100'
+                      }`}
                   >
                     <img src={imgUrl} alt={`Screenshot ${idx + 1}`} className="w-full h-full object-contain bg-slate-950" />
                   </button>

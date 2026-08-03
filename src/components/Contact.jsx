@@ -62,20 +62,17 @@ export default function Contact() {
   return (
     <section id="contact" className="py-16 sm:py-24 relative bg-[var(--color-card)]/50 border-t-2 border-[var(--color-border)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="flex items-center gap-3 mb-12 border-b-2 border-[var(--color-border)] pb-4">
           <span className="text-2xl text-[var(--color-accent-crimson)]">✦</span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl uppercase text-[var(--color-text-main)]">
+          <h2 className="font-display font-extrabold text-xl sm:text-4xl uppercase text-[var(--color-text-main)]">
             GET IN TOUCH &amp; LINKS
           </h2>
-          <span className="font-tech text-xs uppercase font-bold text-[var(--color-text-muted)] tracking-widest ml-auto hidden sm:inline">
-            DIRECT COLLABORATION
-          </span>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          
+
           {/* Left Column: Direct Links & Contact Pills */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -85,7 +82,7 @@ export default function Contact() {
             className="lg:col-span-5 flex flex-col justify-between"
           >
             <div className="retro-card p-6 sm:p-8 flex-1 space-y-6">
-              
+
               <div>
                 <div className="flex items-center gap-2 mb-3">
                   <Sparkles className="w-5 h-5 text-[var(--color-accent-yellow)]" />
@@ -274,7 +271,7 @@ export default function Contact() {
             className="lg:col-span-7 flex flex-col"
           >
             <div className="retro-card p-6 sm:p-8 flex-1">
-              
+
               <div className="flex items-center gap-2 mb-6 border-b border-[var(--color-border-subtle)] pb-3">
                 <MessageSquare className="w-5 h-5 text-[var(--color-accent-crimson)]" />
                 <h3 className="font-display font-bold text-2xl uppercase text-[var(--color-text-main)]">
