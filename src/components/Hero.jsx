@@ -105,26 +105,30 @@ export default function Hero() {
           >
             <div className="retro-card p-5 sm:p-6 flex-1 flex flex-col justify-between relative group">
 
-              {/* Badge Overlay */}
-              <div className="absolute top-4 left-4 z-10">
-                <span className="badge-pill bg-[var(--color-accent-salmon)] text-white border-0 shadow-sm text-[10px]">
-                  ★ DA JUNIOR / DEV
-                </span>
-              </div>
+              {/* Illustration Avatar Frame (Retro Poster Card Style - Circular) */}
+              <div className="relative my-4 w-full max-w-[310px] sm:max-w-[350px] lg:max-w-[370px] aspect-square mx-auto flex flex-col items-center justify-center">
 
-              {/* Illustration Avatar Frame */}
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-4 border-[var(--color-border)] bg-[var(--color-card-secondary)] my-4 w-full max-w-[340px] sm:max-w-[420px] lg:max-w-full aspect-square mx-auto flex items-center justify-center shadow-[6px_6px_0px_var(--color-border)] p-2">
-                {/* Profile Photo - Full Image Display */}
-                <img
-                  src="/profile.png"
-                  alt="Profile"
-                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                />
-
-                {/* Corner Flourish Icons */}
-                <div className="absolute bottom-4 right-4 bg-[var(--color-card)] p-2.5 rounded-full border-2 border-[var(--color-border)] shadow-md z-10">
-                  <Compass className="w-5 h-5 text-[var(--color-accent-crimson)] animate-spin-slow" />
+                {/* Top-Left Badge Overlay */}
+                <div className="absolute top-1 left-2 sm:left-4 z-20">
+                  <span className="px-3 py-1 bg-[var(--color-card)] text-[var(--color-text-main)] border-2 border-[var(--color-border)] rounded-full font-tech font-bold text-[10px] sm:text-xs uppercase tracking-wider shadow-sm flex items-center gap-1">
+                    ★ DA JUNIOR / DEV
+                  </span>
                 </div>
+
+                {/* Circular Photo Frame Box */}
+                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-[var(--color-border)] bg-[var(--color-card-secondary)] shadow-[6px_6px_0px_var(--color-border)] flex items-center justify-center transition-all">
+                  <img
+                    src="/profile.png"
+                    alt="Profile"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+
+                  {/* Bottom-Right Compass Badge */}
+                  <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 bg-[var(--color-card)] p-2 sm:p-2.5 rounded-full border-2 border-[var(--color-border)] shadow-md z-10 flex items-center justify-center">
+                    <Compass className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--color-accent-crimson)] animate-spin-slow" />
+                  </div>
+                </div>
+
               </div>
 
               {/* Bio Highlights */}
