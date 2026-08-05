@@ -105,26 +105,53 @@ export default function Hero() {
           >
             <div className="retro-card p-5 sm:p-6 flex-1 flex flex-col justify-between relative group">
 
-              {/* Illustration Avatar Outer Box Frame (Retro Poster Card Style) */}
-              <div className="relative my-4 w-full max-w-[310px] sm:max-w-[350px] lg:max-w-[370px] aspect-square mx-auto flex flex-col items-center justify-center">
+              {/* Illustration Avatar (Exact Retro Poster Style) */}
+              <div className="relative my-4 w-full max-w-[310px] sm:max-w-[350px] lg:max-w-[370px] mx-auto flex flex-col items-center justify-center">
 
-                {/* Top-Left Badge Overlay */}
-                <div className="absolute -top-3 left-2 sm:left-4 z-20">
+                {/* Top-Left Badge */}
+                <div className="absolute -top-3 left-2 z-20">
                   <span className="px-3 py-1 bg-[var(--color-card)] text-[var(--color-text-main)] border-2 border-[var(--color-border)] rounded-full font-tech font-bold text-[10px] sm:text-xs uppercase tracking-wider shadow-sm flex items-center gap-1">
                     ★ DA JUNIOR / DEV
                   </span>
                 </div>
 
-                {/* Outer Background Box Frame */}
-                <div className="relative w-full h-full rounded-[28px] sm:rounded-[36px] border-3 sm:border-4 border-[var(--color-border)] bg-[var(--color-card-secondary)] p-3 sm:p-4 shadow-[6px_6px_0px_var(--color-border)] flex items-center justify-center overflow-hidden">
-                  
-                  {/* Inner Circular Profile Photo */}
-                  <div className="w-[96%] h-[96%] rounded-full overflow-hidden flex items-center justify-center bg-[var(--color-card-secondary)]">
-                    <img
-                      src="/profile.png"
-                      alt="Profile"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
+                {/* Outer Cream Card Box */}
+                <div className="relative w-full rounded-[24px] sm:rounded-[32px] border-2 border-[var(--color-border)] bg-[var(--color-card-secondary)] p-4 sm:p-5 shadow-[5px_5px_0px_var(--color-border)]">
+
+                  {/* Inner Split Circle with Sparkles */}
+                  <div className="relative w-full aspect-square rounded-full overflow-hidden">
+
+                    {/* Split Background: Left = Crimson, Right = Salmon */}
+                    <div className="absolute inset-0 flex">
+                      <div className="w-1/2 h-full bg-[var(--color-accent-crimson)]" />
+                      <div className="w-1/2 h-full bg-[var(--color-accent-salmon)]" />
+                    </div>
+
+                    {/* Scattered Gold Sparkle Stars */}
+                    <div className="absolute inset-0 pointer-events-none">
+                      <span className="absolute top-[12%] left-[10%] text-[var(--color-accent-yellow)] text-lg animate-star-pulse">✦</span>
+                      <span className="absolute top-[30%] left-[5%] text-[var(--color-accent-yellow)] text-sm animate-star-pulse" style={{animationDelay:'0.4s'}}>✦</span>
+                      <span className="absolute top-[55%] left-[8%] text-[var(--color-accent-yellow)] text-base animate-star-pulse" style={{animationDelay:'0.8s'}}>✦</span>
+                      <span className="absolute top-[72%] left-[15%] text-[var(--color-accent-yellow)] text-xs animate-star-pulse" style={{animationDelay:'1.2s'}}>✦</span>
+                      <span className="absolute top-[18%] left-[22%] text-[var(--color-accent-yellow)] text-xs animate-star-pulse" style={{animationDelay:'0.6s'}}>✦</span>
+                      <span className="absolute top-[42%] left-[18%] text-[var(--color-accent-yellow)] text-sm animate-star-pulse" style={{animationDelay:'1s'}}>✦</span>
+                      <span className="absolute top-[10%] right-[10%] text-[var(--color-accent-yellow)] text-base animate-star-pulse" style={{animationDelay:'0.2s'}}>✦</span>
+                      <span className="absolute top-[28%] right-[8%] text-[var(--color-accent-yellow)] text-xs animate-star-pulse" style={{animationDelay:'0.9s'}}>✦</span>
+                      <span className="absolute top-[50%] right-[6%] text-[var(--color-accent-yellow)] text-sm animate-star-pulse" style={{animationDelay:'0.5s'}}>✦</span>
+                      <span className="absolute top-[68%] right-[14%] text-[var(--color-accent-yellow)] text-lg animate-star-pulse" style={{animationDelay:'1.3s'}}>✦</span>
+                      <span className="absolute top-[20%] right-[22%] text-[var(--color-accent-yellow)] text-base animate-star-pulse" style={{animationDelay:'0.7s'}}>✦</span>
+                      <span className="absolute top-[38%] right-[20%] text-[var(--color-accent-yellow)] text-xs animate-star-pulse" style={{animationDelay:'1.5s'}}>✦</span>
+                    </div>
+
+                    {/* Profile Photo centered on the circle */}
+                    <div className="absolute inset-0 flex items-end justify-center">
+                      <img
+                        src="/profile.png"
+                        alt="Profile"
+                        className="w-[85%] h-[95%] object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        style={{ filter: 'drop-shadow(0 -2px 12px rgba(0,0,0,0.3))' }}
+                      />
+                    </div>
                   </div>
 
                   {/* Bottom-Right Compass Badge */}
