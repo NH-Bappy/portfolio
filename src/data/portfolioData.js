@@ -413,41 +413,41 @@ export const projects = [
   {
     id: "proj-4",
     title: "StudyMate - macOS Web OS Workspace",
-    subtitle: "Interactive Virtual Operating System & Web Desktop App",
+    subtitle: "macOS Web OS & Interactive Collaborative Workspace",
     category: "fullstack",
-    categoryLabel: "Full-Stack Web App",
+    categoryLabel: "Web OS & Workspace",
     year: "2026",
     image: "/studymate-desktop.png",
     galleryImages: [
       "/studymate-desktop.png"
     ],
-    gradient: "from-purple-950 via-pink-900 to-amber-950",
+    gradient: "from-pink-950 via-rose-900 to-indigo-950",
     tags: ["React 19", "Vite 7", "Tailwind CSS v4", "GSAP & Draggable", "Zustand & Immer", "Lucide React", "React PDF", "Day.js"],
-    description: "A modern, high-performance macOS-inspired Web Desktop Application built with React 19, Vite, Tailwind CSS v4, GSAP, and Zustand, providing an interactive virtual operating system interface.",
-    aboutDetail: "StudyMate transforms the traditional web experience into an interactive macOS-inspired Desktop Ecosystem functioning as an open-ended virtual workspace. Architected around an OS Kernel & Plugin System (handling window management, z-index depth layering, GSAP physics dragging, and global state), it allows developers to build native React tools, embed sandboxed web apps via iframes, or manage files in Finder.",
+    description: "A modern, high-performance macOS-inspired Web Desktop Application built with React 19, Vite, Tailwind CSS v4, GSAP, and Zustand, providing an interactive virtual operating system interface for developers to register and showcase custom tools, applications, and external websites.",
+    aboutDetail: "StudyMate transforms traditional portfolio sites into an interactive macOS-inspired Desktop Ecosystem functioning as an open-ended virtual workspace. Architected around an OS Kernel & Plugin System, it handles window management, z-index depth layering, physics-based dragging via GSAP, taskbar navigation, and global system state. Contributors can seamlessly register native React tools, embedded iframe web apps, Dock launchers, or Finder virtual filesystem items.",
     whatIUsed: [
       {
-        category: "Frontend OS Kernel & Animations",
-        tools: ["React 19", "Vite 7", "Tailwind CSS v4", "GSAP & Draggable", "Lucide React"],
-        description: "60fps window physics dragging, desktop dock magnification, top menu bar, and glassmorphism UI system."
+        category: "Core OS Kernel & UI Systems",
+        tools: ["React 19", "Vite 7", "Tailwind CSS v4", "Lucide React"],
+        description: "Component-based virtual desktop interface with customized glassmorphism styling, Dock magnification, top menu bar, and system controls."
       },
       {
-        category: "Global State & File System",
-        tools: ["Zustand & Immer", "React PDF", "Day.js"],
-        description: "Centralized window lifecycle management, dynamic z-index stacking, real-time clock, and Finder document previewers."
+        category: "Window Management & State Engine",
+        tools: ["GSAP & Draggable", "Zustand & Immer", "React PDF", "Day.js"],
+        description: "Physics-based 60fps window dragging, centralized z-index focus depth stacking, entry/exit animations via WindowWrapper HOC, and dynamic document renderers."
       }
     ],
     impact: [
-      { metric: "React 19", label: "Modern Component-Based Web OS Architecture" },
-      { metric: "60 FPS", label: "GSAP Draggable Physics Window Management" },
-      { metric: "Zustand", label: "Immutable Window Depth & State Engine" },
-      { metric: "4 Models", label: "Seamless Contributor Plugin Integration System" }
+      { metric: "60 FPS", label: "GSAP Draggable Physics Window Motion" },
+      { metric: "4 Patterns", label: "Native Apps, Iframes, Dock & Finder Integration" },
+      { metric: "Zustand", label: "Centralized Global Window Depth & State Engine" },
+      { metric: "Plugin System", label: "Modular OS Kernel & Extensible App Architecture" }
     ],
     highlights: [
-      "Interactive macOS Desktop Interface: Dock with magnification, top menu bar with live time/date, and window desktop environment.",
-      "Dynamic Window Management System: Drag-and-drop window positioning, z-index depth layering, minimize, maximize, and smooth open/close animations.",
-      "Built-in Application Suite: Finder file manager, Safari browser, Terminal CLI emulator, Calculator, Photos gallery, and PDF renderers.",
-      "Modular Plugin Ecosystem: 4 integration patterns allowing contributors to embed native React apps, iframe tools, dock shortcuts, or Finder file extensions."
+      "Interactive macOS Desktop Environment: Dock with magnification effects, top menu bar with live time/date, and windowed desktop environment.",
+      "Dynamic Window Management System: Drag-and-drop window positioning, z-index depth layering, minimize, maximize, and smooth 60fps animations.",
+      "Built-in OS Applications Suite: Interactive Finder file manager, Safari browser, Terminal CLI emulator, Calculator, Photos gallery, and PDF renderers.",
+      "Multi-Pattern Integration Engine: Open plugin architecture allowing developers to embed native React tools, sandboxed iframe apps, and external launchers."
     ],
     liveUrl: "https://studymate-psi-dusky.vercel.app/",
     githubUrl: "https://github.com/NH-Bappy/studymate"
