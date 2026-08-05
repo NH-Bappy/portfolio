@@ -40,7 +40,7 @@ export default function Skills() {
           </div>
 
           {/* Filter Buttons */}
-          <div className="flex flex-wrap items-center gap-2.5 py-2 px-1">
+          <div className="flex flex-wrap items-center justify-start md:justify-end md:ml-auto gap-2.5 py-2 px-1">
             {skillCategories.map((cat) => (
               <button
                 key={cat.id}

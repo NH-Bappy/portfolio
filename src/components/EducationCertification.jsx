@@ -25,7 +25,7 @@ export default function EducationCertification() {
           </div>
 
           {/* Filter Tabs */}
-          <div className="flex flex-wrap items-center gap-2.5 py-2 px-1">
+          <div className="flex flex-wrap items-center justify-start md:justify-end md:ml-auto gap-2.5 py-2 px-1">
             {[
               { id: 'all', label: 'All Credentials' },
               { id: 'education', label: 'Education' },
