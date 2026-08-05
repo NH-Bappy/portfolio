@@ -116,10 +116,10 @@ export default function Hero() {
                 </div>
 
                 {/* Outer Cream Card Box */}
-                <div className="relative w-full rounded-[24px] sm:rounded-[32px] border-2 border-[var(--color-border)] bg-[var(--color-card-secondary)] p-4 sm:p-5 shadow-[5px_5px_0px_var(--color-border)]">
+                <div className="relative w-full rounded-[24px] sm:rounded-[32px] border-2 border-[var(--color-border)] bg-[var(--color-card-secondary)] shadow-[5px_5px_0px_var(--color-border)] overflow-hidden">
 
                   {/* Inner Split Circle with Sparkles */}
-                  <div className="relative w-full aspect-square rounded-full overflow-hidden">
+                  <div className="relative w-full aspect-square rounded-full overflow-hidden m-0">
 
                     {/* Split Background: Left = Crimson, Right = Salmon */}
                     <div className="absolute inset-0 flex">
