@@ -66,7 +66,7 @@ export default function Hero() {
               ✦ Full-Stack Web Developer ✦
             </h2>
 
-            <h1 className="font-display font-extrabold text-3xl sm:text-6xl md:text-7xl lg:text-8xl uppercase tracking-tighter text-[var(--color-text-main)] leading-none drop-shadow-sm">
+            <h1 className="font-display font-extrabold text-xl sm:text-2xl md:text-4xl lg:text-6xl uppercase tracking-tighter text-[var(--color-text-main)] leading-none drop-shadow-sm">
               NAIMUL HASAN
             </h1>
 

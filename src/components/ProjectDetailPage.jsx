@@ -118,7 +118,7 @@ export default function ProjectDetailPage({ project, onBack, onSelectProject }) 
               <img
                 src={selectedImage}
                 alt={project.title}
-                className="w-full h-full object-contain bg-slate-950 transition-all duration-500 p-1"
+                className="w-full h-full object-cover transition-all duration-500"
               />
             </div>
 
