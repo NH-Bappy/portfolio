@@ -105,23 +105,27 @@ export default function Hero() {
           >
             <div className="retro-card p-5 sm:p-6 flex-1 flex flex-col justify-between relative group">
 
-              {/* Illustration Avatar Frame (Retro Poster Card Style - Circular) */}
+              {/* Illustration Avatar Outer Box Frame (Retro Poster Card Style) */}
               <div className="relative my-4 w-full max-w-[310px] sm:max-w-[350px] lg:max-w-[370px] aspect-square mx-auto flex flex-col items-center justify-center">
 
                 {/* Top-Left Badge Overlay */}
-                <div className="absolute top-1 left-2 sm:left-4 z-20">
+                <div className="absolute -top-3 left-2 sm:left-4 z-20">
                   <span className="px-3 py-1 bg-[var(--color-card)] text-[var(--color-text-main)] border-2 border-[var(--color-border)] rounded-full font-tech font-bold text-[10px] sm:text-xs uppercase tracking-wider shadow-sm flex items-center gap-1">
                     ★ DA JUNIOR / DEV
                   </span>
                 </div>
 
-                {/* Circular Photo Frame Box */}
-                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-[var(--color-border)] bg-[var(--color-card-secondary)] shadow-[6px_6px_0px_var(--color-border)] flex items-center justify-center transition-all">
-                  <img
-                    src="/profile.png"
-                    alt="Profile"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                {/* Outer Background Box Frame */}
+                <div className="relative w-full h-full rounded-[28px] sm:rounded-[36px] border-3 sm:border-4 border-[var(--color-border)] bg-[var(--color-card-secondary)] p-3 sm:p-4 shadow-[6px_6px_0px_var(--color-border)] flex items-center justify-center overflow-hidden">
+                  
+                  {/* Inner Circular Profile Photo */}
+                  <div className="w-[88%] h-[88%] rounded-full overflow-hidden border-3 border-[var(--color-border)] shadow-md flex items-center justify-center bg-[var(--color-card)]">
+                    <img
+                      src="/profile.png"
+                      alt="Profile"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
 
                   {/* Bottom-Right Compass Badge */}
                   <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 bg-[var(--color-card)] p-2 sm:p-2.5 rounded-full border-2 border-[var(--color-border)] shadow-md z-10 flex items-center justify-center">
