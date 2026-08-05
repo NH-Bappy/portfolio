@@ -106,7 +106,7 @@ export default function Hero() {
             <div className="retro-card p-5 sm:p-6 flex-1 flex flex-col justify-between relative group">
 
               {/* Illustration Avatar Outer Box Frame (Retro Poster Card Style) */}
-              <div className="relative my-4 w-full max-w-[310px] sm:max-w-[350px] lg:max-w-[370px] aspect-square mx-auto flex flex-col items-center justify-center">
+              <div className="relative my-4 w-full max-w-[320px] sm:max-w-[360px] lg:max-w-[390px] aspect-square mx-auto flex flex-col items-center justify-center">
 
                 {/* Top-Left Badge Overlay */}
                 <div className="absolute -top-3 left-2 sm:left-4 z-20">
@@ -116,10 +116,10 @@ export default function Hero() {
                 </div>
 
                 {/* Outer Background Box Frame */}
-                <div className="relative w-full h-full rounded-[28px] sm:rounded-[36px] border-3 sm:border-4 border-[var(--color-border)] bg-[var(--color-card-secondary)] p-3 sm:p-4 shadow-[6px_6px_0px_var(--color-border)] flex items-center justify-center overflow-hidden">
+                <div className="relative w-full h-full rounded-[28px] sm:rounded-[36px] border-3 sm:border-4 border-[var(--color-border)] bg-[var(--color-card-secondary)] p-2 sm:p-3 shadow-[6px_6px_0px_var(--color-border)] flex items-center justify-center overflow-hidden">
                   
-                  {/* Inner Circular Profile Photo */}
-                  <div className="w-[88%] h-[88%] rounded-full overflow-hidden border-3 border-[var(--color-border)] shadow-md flex items-center justify-center bg-[var(--color-card)]">
+                  {/* Inner Circular Profile Photo (Border Removed & Made Bigger) */}
+                  <div className="w-[94%] h-[94%] rounded-full overflow-hidden flex items-center justify-center bg-[var(--color-card)]">
                     <img
                       src="/profile.png"
                       alt="Profile"
