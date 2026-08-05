@@ -130,25 +130,25 @@ export default function Hero() {
                     {/* Scattered Gold Sparkle Stars */}
                     <div className="absolute inset-0 pointer-events-none">
                       <span className="absolute top-[12%] left-[10%] text-[var(--color-accent-yellow)] text-lg animate-star-pulse">✦</span>
-                      <span className="absolute top-[30%] left-[5%] text-[var(--color-accent-yellow)] text-sm animate-star-pulse" style={{ animationDelay: '0.4s' }}>✦</span>
-                      <span className="absolute top-[55%] left-[8%] text-[var(--color-accent-yellow)] text-base animate-star-pulse" style={{ animationDelay: '0.8s' }}>✦</span>
-                      <span className="absolute top-[72%] left-[15%] text-[var(--color-accent-yellow)] text-xs animate-star-pulse" style={{ animationDelay: '1.2s' }}>✦</span>
-                      <span className="absolute top-[18%] left-[22%] text-[var(--color-accent-yellow)] text-xs animate-star-pulse" style={{ animationDelay: '0.6s' }}>✦</span>
-                      <span className="absolute top-[42%] left-[18%] text-[var(--color-accent-yellow)] text-sm animate-star-pulse" style={{ animationDelay: '1s' }}>✦</span>
-                      <span className="absolute top-[10%] right-[10%] text-[var(--color-accent-yellow)] text-base animate-star-pulse" style={{ animationDelay: '0.2s' }}>✦</span>
-                      <span className="absolute top-[28%] right-[8%] text-[var(--color-accent-yellow)] text-xs animate-star-pulse" style={{ animationDelay: '0.9s' }}>✦</span>
-                      <span className="absolute top-[50%] right-[6%] text-[var(--color-accent-yellow)] text-sm animate-star-pulse" style={{ animationDelay: '0.5s' }}>✦</span>
-                      <span className="absolute top-[68%] right-[14%] text-[var(--color-accent-yellow)] text-lg animate-star-pulse" style={{ animationDelay: '1.3s' }}>✦</span>
-                      <span className="absolute top-[20%] right-[22%] text-[var(--color-accent-yellow)] text-base animate-star-pulse" style={{ animationDelay: '0.7s' }}>✦</span>
-                      <span className="absolute top-[38%] right-[20%] text-[var(--color-accent-yellow)] text-xs animate-star-pulse" style={{ animationDelay: '1.5s' }}>✦</span>
+                      <span className="absolute top-[30%] left-[5%] text-[var(--color-accent-yellow)] text-sm animate-star-pulse" style={{animationDelay:'0.4s'}}>✦</span>
+                      <span className="absolute top-[55%] left-[8%] text-[var(--color-accent-yellow)] text-base animate-star-pulse" style={{animationDelay:'0.8s'}}>✦</span>
+                      <span className="absolute top-[72%] left-[15%] text-[var(--color-accent-yellow)] text-xs animate-star-pulse" style={{animationDelay:'1.2s'}}>✦</span>
+                      <span className="absolute top-[18%] left-[22%] text-[var(--color-accent-yellow)] text-xs animate-star-pulse" style={{animationDelay:'0.6s'}}>✦</span>
+                      <span className="absolute top-[42%] left-[18%] text-[var(--color-accent-yellow)] text-sm animate-star-pulse" style={{animationDelay:'1s'}}>✦</span>
+                      <span className="absolute top-[10%] right-[10%] text-[var(--color-accent-yellow)] text-base animate-star-pulse" style={{animationDelay:'0.2s'}}>✦</span>
+                      <span className="absolute top-[28%] right-[8%] text-[var(--color-accent-yellow)] text-xs animate-star-pulse" style={{animationDelay:'0.9s'}}>✦</span>
+                      <span className="absolute top-[50%] right-[6%] text-[var(--color-accent-yellow)] text-sm animate-star-pulse" style={{animationDelay:'0.5s'}}>✦</span>
+                      <span className="absolute top-[68%] right-[14%] text-[var(--color-accent-yellow)] text-lg animate-star-pulse" style={{animationDelay:'1.3s'}}>✦</span>
+                      <span className="absolute top-[20%] right-[22%] text-[var(--color-accent-yellow)] text-base animate-star-pulse" style={{animationDelay:'0.7s'}}>✦</span>
+                      <span className="absolute top-[38%] right-[20%] text-[var(--color-accent-yellow)] text-xs animate-star-pulse" style={{animationDelay:'1.5s'}}>✦</span>
                     </div>
 
-                    {/* Profile Photo centered on the circle */}
+                    {/* Profile Photo - fill full circle */}
                     <div className="absolute inset-0 flex items-end justify-center">
                       <img
                         src="/profile.png"
                         alt="Profile"
-                        className="w-[85%] h-[95%] object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                         style={{ filter: 'drop-shadow(0 -2px 12px rgba(0,0,0,0.3))' }}
                       />
                     </div>
