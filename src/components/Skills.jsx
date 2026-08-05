@@ -32,7 +32,7 @@ export default function Skills() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-4 sm:gap-6 border-b-2 border-[var(--color-border)] pb-6">
           <div>
             <h2 className="font-display font-extrabold text-xl sm:text-4xl uppercase text-[var(--color-text-main)]">
               SKILLS &amp; TECHNOLOGIES
@@ -40,7 +40,7 @@ export default function Skills() {
           </div>
 
           {/* Filter Buttons */}
-          <div className="flex items-center overflow-x-auto no-scrollbar gap-2 pb-1 md:pb-0">
+          <div className="flex items-center overflow-x-auto no-scrollbar gap-2 sm:gap-2.5 pb-1 md:pb-0">
             {skillCategories.map((cat) => (
               <button
                 key={cat.id}
