@@ -106,7 +106,7 @@ export default function Hero() {
             <div className="retro-card p-5 sm:p-6 flex-1 flex flex-col justify-between relative group">
 
               {/* Illustration Avatar (Exact Retro Poster Style) */}
-              <div className="relative my-4 w-full max-w-[310px] sm:max-w-[350px] lg:max-w-[370px] mx-auto flex flex-col items-center justify-center">
+              <div className="relative my-4 w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[450px] mx-auto flex flex-col items-center justify-center">
 
                 {/* Top-Left Badge */}
                 <div className="absolute -top-3 left-2 z-20">
