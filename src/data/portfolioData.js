@@ -412,44 +412,44 @@ export const projects = [
   },
   {
     id: "proj-4",
-    title: "E-Commerce & Inventory REST API Backend",
-    subtitle: "Production-Ready E-Commerce & Real-Time Backend API",
-    category: "backend",
-    categoryLabel: "Back-End REST API",
+    title: "StudyMate - macOS Web OS Workspace",
+    subtitle: "Interactive Virtual Operating System & Web Desktop App",
+    category: "fullstack",
+    categoryLabel: "Full-Stack Web App",
     year: "2026",
-    image: "/rfid-console.png",
+    image: "/studymate-desktop.png",
     galleryImages: [
-      "/rfid-console.png"
+      "/studymate-desktop.png"
     ],
-    gradient: "from-teal-950 via-cyan-950 to-indigo-950",
-    tags: ["Node.js", "Express.js v5", "MongoDB", "Mongoose v8", "Socket.io v4", "JWT & Bcrypt", "SSLCommerz", "Cloudinary", "Multer"],
-    description: "A production-ready, feature-rich RESTful API and real-time backend server managing end-to-end e-commerce operations, payments, logistics, and authentication.",
-    aboutDetail: "Engineered a production-ready Express.js (v5) REST API backend matrix with cookie parsing, CORS permissions, AuthGuard JWT verification, and centralized error handling. Features Mongoose schemas for Users, Products, Variants, Discounts, Cart, Courier logistics, SSLCommerz payment gateway (cards, bKash, Nagad) with IPN callbacks, BWIP-JS invoice barcodes, and Socket.io live notifications.",
+    gradient: "from-purple-950 via-pink-900 to-amber-950",
+    tags: ["React 19", "Vite 7", "Tailwind CSS v4", "GSAP & Draggable", "Zustand & Immer", "Lucide React", "React PDF", "Day.js"],
+    description: "A modern, high-performance macOS-inspired Web Desktop Application built with React 19, Vite, Tailwind CSS v4, GSAP, and Zustand, providing an interactive virtual operating system interface.",
+    aboutDetail: "StudyMate transforms the traditional web experience into an interactive macOS-inspired Desktop Ecosystem functioning as an open-ended virtual workspace. Architected around an OS Kernel & Plugin System (handling window management, z-index depth layering, GSAP physics dragging, and global state), it allows developers to build native React tools, embed sandboxed web apps via iframes, or manage files in Finder.",
     whatIUsed: [
       {
-        category: "Backend Framework & Architecture",
-        tools: ["Node.js", "Express.js v5", "JWT & Bcrypt", "Joi & Axios"],
-        description: "RESTful API matrix, AuthGuard middleware, HTTP-only cookie JWT auth, and schema validation."
+        category: "Frontend OS Kernel & Animations",
+        tools: ["React 19", "Vite 7", "Tailwind CSS v4", "GSAP & Draggable", "Lucide React"],
+        description: "60fps window physics dragging, desktop dock magnification, top menu bar, and glassmorphism UI system."
       },
       {
-        category: "Database & Real-Time Comms",
-        tools: ["MongoDB", "Mongoose v8", "Socket.io v4", "Cloudinary"],
-        description: "Relational Mongoose models, private room WebSocket live notifications, and Cloudinary media uploading."
+        category: "Global State & File System",
+        tools: ["Zustand & Immer", "React PDF", "Day.js"],
+        description: "Centralized window lifecycle management, dynamic z-index stacking, real-time clock, and Finder document previewers."
       }
     ],
     impact: [
-      { metric: "SSLCommerz", label: "Integrated Payment Gateway & Callback IPN" },
-      { metric: "Socket.io v4", label: "Real-Time Targeted Private Room Notifications" },
-      { metric: "Express v5", label: "High-Performance RESTful Routing Matrix" },
-      { metric: "JWT + Bcrypt", label: "HTTP-Only Secure Authentication & AuthGuard" }
+      { metric: "React 19", label: "Modern Component-Based Web OS Architecture" },
+      { metric: "60 FPS", label: "GSAP Draggable Physics Window Management" },
+      { metric: "Zustand", label: "Immutable Window Depth & State Engine" },
+      { metric: "4 Models", label: "Seamless Contributor Plugin Integration System" }
     ],
     highlights: [
-      "Core Architecture: Engineered Express.js (v5) REST API matrix with AuthGuard JWT verification and centralized error handling.",
-      "Authentication & Security: Access & Refresh JWTs in HTTP-only cookies, password hashing with Bcrypt, and Nodemailer OTP verification.",
-      "Payments & Invoicing: Integrated SSLCommerz payment gateway with IPN callbacks and BWIP-JS barcode invoice generation.",
-      "Real-Time WebSockets: Deployed Socket.io (v4) for targeted private room live notifications and Multer + Cloudinary image management."
+      "Interactive macOS Desktop Interface: Dock with magnification, top menu bar with live time/date, and window desktop environment.",
+      "Dynamic Window Management System: Drag-and-drop window positioning, z-index depth layering, minimize, maximize, and smooth open/close animations.",
+      "Built-in Application Suite: Finder file manager, Safari browser, Terminal CLI emulator, Calculator, Photos gallery, and PDF renderers.",
+      "Modular Plugin Ecosystem: 4 integration patterns allowing contributors to embed native React apps, iframe tools, dock shortcuts, or Finder file extensions."
     ],
-    liveUrl: "https://github.com/NH-Bappy",
-    githubUrl: "https://github.com/NH-Bappy"
+    liveUrl: "https://studymate-psi-dusky.vercel.app/",
+    githubUrl: "https://github.com/NH-Bappy/studymate"
   }
 ];
