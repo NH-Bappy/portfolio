@@ -17,7 +17,7 @@ export default function EducationCertification() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-4 sm:gap-6 border-b-2 border-[var(--color-border)] pb-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 border-b-2 border-[var(--color-border)] pb-6">
           <div>
             <h2 className="font-display font-extrabold text-xl sm:text-4xl uppercase text-[var(--color-text-main)]">
               EDUCATION &amp; CERTIFICATION
@@ -25,7 +25,7 @@ export default function EducationCertification() {
           </div>
 
           {/* Filter Tabs */}
-          <div className="flex items-center overflow-x-auto no-scrollbar gap-2 sm:gap-2.5 pb-1 md:pb-0">
+          <div className="flex flex-wrap items-center gap-2.5 py-2 px-1">
             {[
               { id: 'all', label: 'All Credentials' },
               { id: 'education', label: 'Education' },
