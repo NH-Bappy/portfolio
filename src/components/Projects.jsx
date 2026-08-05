@@ -83,7 +83,7 @@ export default function Projects({ onSelectProject }) {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-contain bg-slate-950 transition-transform duration-700 group-hover:scale-105 p-1"
                     />
 
                     {/* Hover Overlay Button */}

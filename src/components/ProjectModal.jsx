@@ -69,7 +69,7 @@ export default function ProjectModal({ project, onClose }) {
             <img
               src={activeImage || project.image}
               alt={project.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain bg-slate-950 p-1"
             />
           </div>
 
