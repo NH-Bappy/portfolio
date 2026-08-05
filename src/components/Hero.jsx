@@ -113,12 +113,12 @@ export default function Hero() {
               </div>
 
               {/* Illustration Avatar Frame */}
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-4 border-[var(--color-border)] bg-[var(--color-card-secondary)] my-4 w-full max-w-[340px] sm:max-w-[420px] lg:max-w-full aspect-[4/5] sm:aspect-square mx-auto flex items-center justify-center shadow-[6px_6px_0px_var(--color-border)]">
-                {/* Profile Photo - Retro Poster Aesthetic */}
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-4 border-[var(--color-border)] bg-[var(--color-card-secondary)] my-4 w-full max-w-[340px] sm:max-w-[420px] lg:max-w-full aspect-square mx-auto flex items-center justify-center shadow-[6px_6px_0px_var(--color-border)] p-2">
+                {/* Profile Photo - Full Image Display */}
                 <img
                   src="/profile.png"
                   alt="Profile"
-                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
 
                 {/* Corner Flourish Icons */}
