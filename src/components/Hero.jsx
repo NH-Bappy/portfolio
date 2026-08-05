@@ -143,12 +143,12 @@ export default function Hero() {
                       <span className="absolute top-[38%] right-[20%] text-[var(--color-accent-yellow)] text-xs animate-star-pulse" style={{animationDelay:'1.5s'}}>✦</span>
                     </div>
 
-                    {/* Profile Photo - fill full circle */}
+                    {/* Profile Photo - centered with slight margin inside circle */}
                     <div className="absolute inset-0 flex items-end justify-center">
                       <img
                         src="/profile.png"
                         alt="Profile"
-                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        className="w-[90%] h-[94%] object-cover object-top transition-transform duration-500 group-hover:scale-105"
                         style={{ filter: 'drop-shadow(0 -2px 12px rgba(0,0,0,0.3))' }}
                       />
                     </div>
